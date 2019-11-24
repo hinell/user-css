@@ -1,0 +1,33 @@
+{
+  "name": "userstyles",
+  "description": "Collections of userstyles",
+  "private": true,
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ver:bump": "lerna version --no-git-tag-version",
+    "ver:tag": "lerna version --no-push",
+    "ver": "lerna version",
+    "log": "conventional-changelog -s -i CHANGELOG",
+    "cz": "git-cz",
+    "bootstrap": "lerna bootstrap --hoist"
+
+  },
+  "keywords": [
+    "userstyle"
+  ],
+  "author": "Alexander Davronov hinell@github.com <al.neodimg@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "conventional-changelog-cli": "^2.0.28",
+    "cz-conventional-changelog": "^3.0.2",
+    "lerna": "^3.19.0"
+  },
+  "dependencies": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

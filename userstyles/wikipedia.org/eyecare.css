@@ -1,0 +1,347 @@
+@document regexp("(https?:\\/\\/)([a-zA-Z\\-]+\\.)(wik(ipedia|imedia|tionary)\\.org)(.*)")
+
+{
+
+        /* --------------< GENERAL BACKGROUND & COLOR >-------------- */
+        html
+    ,	body
+    ,	#content
+    ,	#footer *
+    /* ,   [class*="mw-"]:not(.mw-wiki-logo):not(.mw-headline):not(.cm-mw-ext-ground):not(.cm-mw-doubleUnderscore) */
+    ,   #pt-userpage [class*="oo-"]
+    ,   [id*="mw-"]
+    ,   [id*="mp-"]
+    ,   [class*="navbox-"]
+    , 	[class*="ts-"]
+
+    , 	.mw-mmv-post-image
+    ,	.mw-mmv-image-metadata
+    ,	.mw-mmv-info-box
+
+    /* French specific START */
+    ,	.homonymie
+    ,	.bandeau-section
+    ,	.autres-projets
+    /* French specific END */
+    
+
+    /* Russsian specific START */
+    ,	div[class*="main-"]
+    /* Russsian specific END */
+    
+    ,	.oo-ui-layout
+    ,	.oo-ui-widget
+    ,	.oo-ui-widget [class*="mw-"]:not(a)
+    ,	.oo-ui-toolbar-bar
+    ,	.oo-ui-buttonElement-button
+    ,	.oo-ui-window-content
+    
+    , 	.rt-tooltip
+    , 	.rt-tooltip .rt-tooltipTail::after
+    
+    ,	blockquote
+    ,	table, tbody, th:not([style*="background-color"]):not([style*="background"]), tr, tr + tr
+    , 	td:not([bgcolor]):not([style*="background-color"]):not([style*="background"])
+
+    , 	dl, dh, dd
+    ,	h1, h2, h3, h4, h5, h6
+    ,   .quotebox
+
+    /* Sidebars, boxes, panes etc. - everything that doesn't belong to a content itself */
+    ,	#toc
+    ,	.tocnumber
+    ,	#filetoc
+    ,	.thumbinner 
+    , 	.rt-tooltipTail
+    , 	.infobox, .infobox *:not(b):not([class*="ui-"])
+    ,	.infobox .NavHead[style*="background"]
+    ,	.vertical-navbox .NavHead[style*="background"]
+    , 	#catlinks, #catlinks * 
+    , 	.portal, .portal *:not(.uls-settings-trigger)
+    , 	.suggestions
+    , 	.editOptions
+    , 	.plainlist
+    ,	.shortcutbox
+    ,	.gallery .gallerybox .thumb
+    , 	#template-documentation
+    , 	.suggestions .suggestions-result:not(.suggestions-result-current)
+    , 	.suggestions .suggestions-special
+    , 	.suggestions .suggestions-special *
+    {
+
+        background      : hsl(0, 0%, 12%) !important;
+        background-color: hsl(0, 0%, 12%) !important;
+        color           : hsl(0, 0%, 60%) !important;
+    }
+    
+        .mw-mmv-info-box
+    , 	.navbox, .navbox *
+    ,	#Container
+    ,	#Container #Caption
+    ,	.oo-ui-widget .mw-widget-calendarWidget-day-today
+    ,	.suggestions-results .suggestions-result.suggestions-result-current
+    {
+        background      : hsl(0, 0%, 30%) !important;
+        background-color: hsl(0, 0%, 30%) !important;
+        color           : hsl(0, 0%, 60%) !important;
+    }
+    
+        .mwe-math-fallback-image-inline
+    {
+        background-color: hsl(0, 0%, 50%) !important;
+
+    }
+    /* --------------< HEADING CONTROLS >-------------- */
+        
+
+        #mw-head .vectorMenu h3
+    ,	.vectorMenu
+    ,	#mw-head .vectorTabs
+    ,	.vectorTabs ul li
+
+    {
+        background-image: none !important;
+    }
+
+    #left-navigation {
+        float        : left !important;
+        /* margin-left  : 10em !important;
+        margin-top   : 2.5em !important;
+        margin-bottom: -2.5em !important; */
+        margin: 2.5em 0 -2.5em 12em !important;
+    }
+    #right-navigation {
+        float     : right;
+        margin: 2.5em 0 0 0 !important;
+    }
+
+    /* #footer-info-copyright:after { */
+    #footer-places li:last-child:after {
+        content    : " • Wikipedia Dark Mode by Hinell@github.com • 2019 • v1.3.5 ";
+        /* position   : absolute; */
+        /* top        : 120px; */
+        text-align : center;
+        font-family: -apple-system, system-ui, Segoe UI, Lato, Tahoma, sans-serif;
+        color      : hsl(0, 0%, 60%) !important;
+        font-size  : 12px;
+        /* opacity    : 0; */
+        /* transition : color 1s 1s; */
+    }
+    
+    a.mw-wiki-logo:hover:after {
+        color: rgba(100%, 100%, 100%, 1);
+        /* opacity: 0.6; */
+    }
+    
+    
+    /* Control panel */
+        .vectorTabs ul li a
+    ,	.vectorTabs .mw-watchlink.icon a
+    , 	.vectorMenu h3
+    {
+        color         : hsl(0, 0%, 85%) !important;
+        line-height   : 2em !important;
+        padding       : 0 8px;
+        vertical-align: middle;
+        font-weight   : 300;
+        width         : auto !important;
+        height        : auto !important;
+        transition    : color 500ms;
+    }
+
+    
+    .vectorTabs .mw-watchlink.icon a:before
+    {
+        content: "";
+        background-image: none !important;
+    }
+
+    
+    .vectorTabs ul li a:visited {
+    }
+    
+        .vectorTabs ul li
+    , 	.vectorMenu h3
+
+    {
+        display         : block;
+        background-color: hsl(0, 0%, 30%) !important;
+        border-radius   : 2px;
+        margin          : 0 2px !important;
+        height          : auto !important;
+    }
+
+        .vectorTabs ul li:hover a
+    , 	.vectorMenu h3:hover
+    {
+        color: white !important;
+    }
+
+    .vectorTabs ul li.selected {
+            background-color: 	hsl(0, 0%, 55%) !important;	
+            box-shadow: none !important;
+    }
+    
+    .vectorTabs ul li.selected a {
+        font-weight     : bold;
+    }
+
+    /* --------------< TEXT STYLE >-------------- */
+        h1#firstHeading
+    {
+        border-bottom: 1px solid hsl(0, 0%, 40%);
+    }
+
+        h1, h2, h3, h4, h5, h6
+    ,	.mw-headline
+    , 	.toctitle
+    {
+        color: hsl(0, 0%, 70%) !important;
+    }
+
+        b	
+    , 	.highlight
+    ,	th	> *
+    ,	dt	> *
+    ,	.infobox th	> *
+    ,	.infobox dt	> *
+    {
+        font-weight: 600;
+        color: hsl(0, 0%, 80%) !important;
+    }
+
+
+    /* --------------< CONTENT LINK >-------------- */
+
+        /* #content a:not([role*="button"]):not([accesskey]) */
+        #content a:not([role*="button"]):not(.new)
+    ,	#footer a
+    ,	.toctogglelabel
+    ,	div[id*="-navigation"] *[id*="pt-"] a
+    ,	[class*="mv-"] a
+    , 	a span[style*="color"]
+    , 	.rt-tooltip a
+    ,	.oo-ui-widget a
+    ,	.oo-ui-window-body a
+    ,	.reference
+    {
+            color              : hsl(20, 75%, 40%) !important;
+            transition-duration: 500ms;
+            transition-property: color;
+
+    }
+        .vectorTabs *[id*="ca-"]  a
+    ,	.vectorTabs *[id*="pt-"]  a
+    {
+        background-image: none !important;
+    }
+
+    a:hover {
+            color          : hsl(0, 60%, 100%) !important;
+            text-decoration: none !important;
+    }
+
+    a:visited {
+        color: hsl(20, 50%, 40%) !important;
+    }
+    
+    p a.new {
+        color: hsl(0, 100%, 45%) !important;
+    }
+    
+    p a.new:visited {
+        color: hsl(0, 100%, 30%) !important;
+    }
+
+    /* --------------< INPUTS >-------------- */
+
+    #searchform {
+        margin: 0 !important;
+    }
+
+    #searchInput {
+        transition-property: all;
+        transition-duration: 500ms;
+    }
+
+    #searchInput {
+        background-color: hsl(0, 0%, 35%) !important;
+        color           : hsl(0, 0%, 60%) !important;
+        outline         : none !important;
+        border          : none !important;
+    }
+
+    #searchInput::placeholder {
+        color           : hsl(0, 0%, 70%) !important;
+    }
+
+    #searchInput:focus {
+        color     : hsl(0, 0%, 100%) !important;
+        background-color: hsl(0, 0%, 50%) !important;
+        box-shadow: none !important;
+    }
+
+    #searchInput:focus::placeholder {
+        color     : hsl(0, 0%, 100%) !important;
+    }
+
+
+    /* --------------< IMAGES >-------------- */
+
+    #p-logo a.mw-wiki-logo[href*="/wiki/"] {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Wikipedia-logo_%28inverse%29.png") !important;
+        background-size: 70% !important;
+        background-position-y: 20%;
+    } 
+    img {
+        border: none !important;
+    }
+
+    /* --------------< MISC >-------------- */
+
+        .infobox
+    , 	table
+    , 	tbody
+    , 	#toc
+    ,   [id*="mp-"]
+    , 	.thumbinner
+    , 	.portal
+    {
+        border-color       : hsl(0, 0%, 40%) !important;
+        border-top-color   : hsl(0, 0%, 40%) !important;
+        border-bottom-color: hsl(0, 0%, 40%) !important;
+        border-right-color : hsl(0, 0%, 40%) !important;
+        border-left-color  : hsl(0, 0%, 40%) !important;
+
+    }
+
+        #content
+    {
+        border:none !important;
+    }
+
+        .mw-highlight  pre:not(.CodeMirror-line)
+    ,	.mw-highlight
+    ,	div > pre
+    , 	code
+    {
+        color     : hsl(0, 0%, 0%);
+        background: hsl(0, 0%, 15%) !important;
+        transition: background-color 500ms;
+    }
+        .mw-highlight pre:hover:not(.CodeMirror-line)
+    ,	div > pre:hover
+    ,	p > code
+    ,	li > code
+    ,	td > code
+    ,	dd > code
+    ,	p > code.mw-highlight
+    {
+        background: hsl(0, 0%, 80%) !important;
+
+    }
+
+    ul {
+        list-style-image: initial !important;
+    }
+}

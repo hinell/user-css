@@ -1,0 +1,11 @@
+{
+  "command": {
+    "publish": {
+        "ignoreChanges": ["*.md", "*.jpg"]
+    }
+  },
+  "packages": [
+    "userstyles/*"
+  ],
+  "version": "independent"
+}
