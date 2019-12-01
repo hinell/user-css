@@ -1,0 +1,64 @@
+@-moz-document regexp("^https:\\/\\/www.gnu.org\\/software\\/make\\/manual\\/.*") {
+    html, body {
+        --default-fonts: system-ui, -apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;
+        background: hsl(0, 0%, 10%) !important; 
+        color: white !important;
+        font-family: var(--default-fonts) !important;
+    }
+    
+    
+    /* Examples & Code */
+    pre {
+        color: black;
+    /*     font-family: var(--default-fonts); */
+        font-family: consolas;
+    }
+    
+    pre.menu-comment {
+        font-weight: bold;
+        text-transform: uppercase;
+        background: hsl(0, 0%, 20%);
+        color: white;
+        font-family: var(--default-fonts) !important;
+    }
+    
+    
+    
+    div.example {
+        border-radius: 0px;
+        background: hsl(0, 0%, 40%) !important;
+        border: none !important;
+        padding: 8px;
+        box-shadow: inset 0px 0px 2px 1px hsl(0, 0%, 10%);
+    
+    }
+    
+    div.example > pre.example {
+        border-radius: 0;
+        background: hsl(0, 0%, 15%) !important;
+        color: white;
+        padding: .8em 1.2em .4em;
+        box-shadow: 0px 0px 2px 1px hsl(0, 0%, 10%);
+    } 
+    
+    /* Links  */
+    a[href]
+    {
+        color: hsl(20, 75%, 40%) !important;
+    }
+    
+    a[href]:visited
+    {
+        color: hsl(20, 55%, 40%) !important;
+    }
+    
+    a[href]:hover
+    {
+        color: hsl(0, 0%, 100%)
+    }
+    
+    p, h1, h2, h3, h4
+    {
+        color: white;
+    }
+    }

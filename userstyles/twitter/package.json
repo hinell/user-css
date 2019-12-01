@@ -1,0 +1,14 @@
+{
+  "name": "@userstyles/twitter-com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dark userstyles for twitter.com",
+  "keywords": [
+    "userstyle"
+  ],
+  "author": "Hinell <al.neodim@gmail.com>",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  }
+}

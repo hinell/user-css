@@ -1,14 +1,14 @@
 {
   "name": "userstyles",
-  "description": "Collections of userstyles",
   "private": true,
+  "description": "Collections of userstyles",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ver:bump": "lerna version --no-git-tag-version",
     "ver:tag": "lerna version --no-push",
     "ver": "lerna version",
-    "log": "conventional-changelog -s -i CHANGELOG",
+    "log": "conventional-changelog -p angular -si CHANGELOG.md",
     "cz": "git-cz",
     "bootstrap": "lerna bootstrap --hoist"
 

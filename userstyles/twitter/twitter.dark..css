@@ -1,0 +1,103 @@
+@-moz-document domain("twitter.com") {
+    * {
+        border: none !important;
+    }
+    
+        html, body
+    ,   div[data-testid="sidebarColumn"] > div:first-child > div:nth-child(2) > div > div > div > div:first-child
+    ,   div[data-testid="sidebarColumn"] form[aria-label="Search Twitter"] *
+    ,   main[role="main"]
+    ,   main[role="main"] > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:nth-child(2)
+    ,   main[role="main"] > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:nth-child(2) > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div > div
+    
+        /*Tweetdeck*/
+    ,   html.dark .app-content
+    ,   html.dark .column-panel
+    ,   html.dark .stream-item
+    ,   html.dark .column-header, html.dark .column-header-temp
+    ,   html.dark .app-header
+    ,   html.dark .column-nav-item
+    ,   html.dark .app-navigator
+    ,   html.dark .app-title
+    {
+        background-color: hsl(0, 0%, 10%) !important;    
+        
+    }
+    
+        div[aria-label="Timeline: Your Home Timeline"]
+    ,   div[aria-label="Timeline: Trending now"]
+    ,   aside[aria-label="Relevant people"]
+    ,   aside[aria-label="Who to follow"]
+    ,   main div[data-testid="primaryColumn"]
+        /*Tweet field (What's happening right noe?)*/
+    ,   main div[data-testid="primaryColumn"] > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child
+    
+    
+    ,   section[aria-labelledby="accessible-list-0"]
+    ,   section[aria-labelledby="accessible-list-1"]
+    ,   section[aria-labelledby="accessible-list-2"]
+    ,   article[role="article"] > div:first-child > div:nth-child(2) > div:first-child > div:nth-child(2)
+    ,   div[data-testid="primaryColumn"] nav[role="navigation"] div[role="tablist"]
+    
+    {
+        background-color: hsl(0, 0%, 15%) !important;    
+        border: none !important;    
+    }
+    
+    
+        article[role="article"]:hover
+    {
+        background-color: hsl(0, 0%, 10%) !important;
+        border: none !important;    
+    }
+    
+        main[role="main"] > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:nth-child(3) 
+    ,   div[aria-label="Timeline: Search timeline"] > div:first-child > div:first-child > div:nth-child(6) > div > div
+    ,   div[role="blockquote"]
+    ,   a[role="tab"]:hover
+    ,   div[role="button"]:hover
+    {
+        background-color: hsl(0, 0%, 20%) !important;    
+    }
+        
+        /* Tweet button */
+        a[aria-label="Tweet"]
+    ,   a[aria-label="Tweet"] span
+    ,   div[data-testid="toolBar"] [data-testid="tweetButtonInline"]
+    ,   div[data-testid="toolBar"] [data-testid="tweetButtonInline"] span
+    {
+        background-color: hsl(8, 50%, 40%) !important;
+        color: white !important;
+    }
+    
+        /* Any button  */
+        a
+    ,   [role="button"] span
+    ,   a[role="link"] span
+    {
+        color: hsl(10, 42%, 45%) !important
+    }
+    
+        a[role="tab"] span
+    {
+        color: white !important;
+    }
+    
+        /* Messages */
+        section[aria-label="Section navigation"] div[data-testid="conversation"]
+    ,   section[aria-label="Section details"] 
+    {
+        background-color: hsl(0, 0%, 10%) !important;
+    }
+        /* Messages */
+        section[aria-label="Section details"] div[role="presentation"]
+    {
+    
+        background-color: hsl(0, 0%, 15%) !important;
+    }
+    
+        section[aria-label="Section details"] div[role="presentation"] span
+    {
+        color: white !important;
+    }
+    }

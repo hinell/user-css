@@ -13,7 +13,7 @@
 
 <center> • • • </center>
 
-This repo contains `.css` files which I have created in order to improve experience of internet browsing when visiting  sites which do not support dark mode. I've created a bunch of styles for ones I frequntly visit or use like Wikipedia, Twitter etc. Check out [`userstyles/`](./userstyles/) folder to find out more.
+This repo contains `.css` files which I have created in order to improve experience of internet browsing when visiting  sites which do not support dark mode. I've created a bunch of styles for the ones that I frequntly visit like Wikipedia, Twitter etc. Check out [`userstyles/`](./userstyles/) folder to find out more.
 
 
 
@@ -29,16 +29,18 @@ To be able to use userstyles in your browser you have to install plugin that inj
 The following stylesheets are listed under `userstyles/`: 
 
 * [wikipedia.dark.css](./userstyles/wikipedia.org/README.md)
-<br/>Styles for various Wikimedia Foundation sites like wiktionary, wikibooks, etc
+<br/>Styles for various Wikimedia Foundation sites akin to wiktionary, wikibooks, etc
 
 
-* [git-doc.dark.css](./userstyles/git-doc-local/README.md)
-<br/>Styles for locally available git documetation html pages. Documentation may be accessed via `git help <git command>` command.
+* [git-docs.dark.css](./userstyles/git-docs-local/README.md)
+<br/>Styles for locally available git documetation html pages. Documentation wchich is typically accessed via `git help <git command>` command.
+
+* [npm-docs.dark.css](./userstyles/npm-docs-local/README.md)
+<br/>Styles for locally available npm documetation. Documentation wchich is typically accessed via `npm help <git command>` command.
 
 
-* [your.style.css](./userstyles/new/README.md)
-<br/>You may contribute to this repo by opening up a pull request!
-
+* [your.superb.style.css](./userstyles/new/README.md)
+<br/>You may [contribute][contribute] your own styles to this repo by opening up a PR! 
 
 ## FAQ
 [faq]: #faq
@@ -50,7 +52,7 @@ Basically it's any `.css` (Cascading Style Sheet) file that becomes a userstyle 
 
 
 ## Contribute
-[styles]: #contribute
+[contribute]: #contribute
 
 The projet maintanance is government by two tools: `git-cz` and `lerna`. Good point to start with contribution is to checkout [`package.json`](./package.json) file scripts first.
 
@@ -60,15 +62,24 @@ The projet maintanance is government by two tools: `git-cz` and `lerna`. Good po
 |`$ npx lerna create <pkg name>`| create new userstyle |
 
 
+## Changelog
+[changelog]: #changelog
+
+TODO Generate
+
 [↑ Go To Top][top]
 
 ---
+
 The Project is proudly managed by [Lerna][ad-lerna].
-<br/> Documented by README.MD.
+<br/> Documented by [README.MD][ad-readme].
 <br/>
+
+---
+
 Copyright 2019 © Alexander Davronov &lt;al.neodim@gmail.com&gt; 
 <br/> 
 
 [0]: https://twitter.com/biteofpie
 [ad-lerna]: https://lerna.js.org/
-[ad-readme]: https://lerna.js.org/
+[ad-readme]: https://github.com/hinell/project-boilerplate/blob/master/README.md

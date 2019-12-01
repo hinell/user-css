@@ -1,0 +1,15 @@
+{
+  "name": "@userstyles/gnu-docs-man",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GNU Man pages Dark Mode",
+  "author": "Hinell <al.neodim@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
