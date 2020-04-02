@@ -1,4 +1,4 @@
-@-moz-document regexp("file:\\/\\/\\/.*\\/mingw64\\/share\\/doc\\/git-doc\\/.*")
+@-moz-document regexp(".*\\/share\\/doc\\/git-doc\\/.*")
 {
     body {
         background: hsl(0, 0%, 15%);

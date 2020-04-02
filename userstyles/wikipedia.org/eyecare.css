@@ -1,4 +1,4 @@
-@document regexp("(https?:\\/\\/)([a-zA-Z\\-]+\\.)(wik(ipedia|imedia|tionary)\\.org)(.*)")
+@document regexp("(https?:\\/\\/)([a-zA-Z\\-]+\\.)(wik(ipedia|imedia|tionary|ibooks)\\.org)(.*)")
 
 {
 
@@ -289,9 +289,7 @@
     /* --------------< IMAGES >-------------- */
 
     #p-logo a.mw-wiki-logo[href*="/wiki/"] {
-        background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Wikipedia-logo_%28inverse%29.png") !important;
-        background-size: 70% !important;
-        background-position-y: 20%;
+        filter: invert(1);
     } 
     img {
         border: none !important;
