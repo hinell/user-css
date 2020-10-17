@@ -1,3 +1,13 @@
+/* ==UserStyle==
+@name         GIT Dark Theme
+@description  Dark theme for local GIT docs (git help -w <command>)
+@namespace    hinell/styles/git-docs-local
+@homepageURL  https://github.com/hinell
+@author       Hinell <neodim@gmail.com> (https://github.com/hinell)
+@version      1.0.1
+@license      MIT
+==/UserStyle== */
+
 @-moz-document regexp(".*\\/share\\/doc\\/git-doc\\/.*")
 {
     body {

@@ -1,3 +1,12 @@
+/* ==UserStyle==
+@name         Twitter
+@description  Dark theme for Twitter.com
+@namespace    hinell/styles/twitter
+@homepageURL  https://github.com/hinell
+@author       Hinell <neodim@gmail.com> (https://github.com/hinell)
+@version      1.0.0
+@license      MIT
+==/UserStyle== */
 @-moz-document domain("twitter.com") {
     * {
         border: none !important;
