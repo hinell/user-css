@@ -8,6 +8,7 @@
 @license      MIT
 ==/UserStyle== */
 /* --------------< GENERAL BACKGROUND & COLOR >-------------- */
+@-moz-document regexp("(https?:\/\/)([a-zA-Z\-]+\.)(wik(ipedia|imedia|tionary|ibooks)\.org)(.*)"){
         html
     ,	body
     ,	#content
@@ -174,6 +175,7 @@
         #mw-head #left-navigation  #p-namespaces ul.vector-menu-content-list li a
     ,   #mw-head #right-navigation #p-views      ul.vector-menu-content-list li a
     {
+        color: inherit;
     }
 
     /* Invidial tabs, links hover */
@@ -362,3 +364,4 @@
     ul {
         list-style-image: initial !important;
     }
+}
