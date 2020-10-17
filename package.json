@@ -18,10 +18,10 @@
   "author": "Alexander Davronov hinell@github.com <al.neodimg@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "commitizen": "^4.0.3",
-    "conventional-changelog-cli": "^2.0.31",
-    "cz-conventional-changelog": "^3.1.0",
-    "lerna": "^3.20.2"
+    "commitizen": "^4.2.1",
+    "conventional-changelog-cli": "^2.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "lerna": "^3.22.1"
   },
   "dependencies": {},
   "config": {
