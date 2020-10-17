@@ -107,7 +107,8 @@ dist
 .tern-port
 
 .vscode/*
-!.vscode/settings.json
+# mark with ! to exclude
+.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
