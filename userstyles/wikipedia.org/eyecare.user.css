@@ -139,55 +139,67 @@
     }
     
     
-    /* Control panel */
-        .vectorTabs ul li a
-    ,	.vectorTabs .mw-watchlink.icon a
-    , 	.vectorMenu h3
+    /* --------------< Control panel (tabs: artcle, talk, read, edit etc) >-------------- */
+
+    /* Invidial tabs */
+        .off-vector-menu-tabs ul li
+    , 	.off-vector-menu h3
+    ,   #mw-head #left-navigation  #p-namespaces ul.vector-menu-content-list li
+    ,   #mw-head #right-navigation #p-views      ul.vector-menu-content-list li
+
     {
-        color         : hsl(0, 0%, 85%) !important;
-        line-height   : 2em !important;
-        padding       : 0 8px;
-        vertical-align: middle;
-        font-weight   : 300;
-        width         : auto !important;
-        height        : auto !important;
-        transition    : color 500ms;
+        display         : block;
+        background-color: hsl(0, 0%, 30%) !important;
+        background-image: none !important;
+        border-radius   : 2px;
+        margin          : 0 2px !important;
+        height          : 1.8em !important;
+        line-height     : 2em !important;
+        transition      : color 500ms;
     }
 
-    
-    .vectorTabs .mw-watchlink.icon a:before
+    /* Invidial tabs, links */
+        #mw-head #left-navigation  #p-namespaces ul.vector-menu-content-list li a
+    ,   #mw-head #right-navigation #p-views      ul.vector-menu-content-list li a
+    {
+        color           : white !important;
+        height          : auto !important;
+        width           : auto !important;
+        padding         : 0 8px;
+        vertical-align  : middle;
+        font-weight     : 300;
+        transition      : color 500ms;
+    }
+    /* Invidial tabs, links visited */
+        #mw-head #left-navigation  #p-namespaces ul.vector-menu-content-list li a
+    ,   #mw-head #right-navigation #p-views      ul.vector-menu-content-list li a
+    {
+    }
+
+    /* Invidial tabs, links hover */
+        #mw-head #left-navigation  #p-namespaces ul.vector-menu-content-list li:hover a
+    ,   #mw-head #right-navigation #p-views      ul.vector-menu-content-list li:hover a
+    {
+        color           : hsl(20, 75%, 40%) !important;
+
+    }
+
+    /* Hide decorations of Control panel navs */
+        .vector-menu-tabs
+    ,   .vector-menu-tabs a
+    ,   #mw-head .vector-menu-dropdown h3
     {
         content: "";
         background-image: none !important;
     }
 
-    
-    .vectorTabs ul li a:visited {
-    }
-    
-        .vectorTabs ul li
-    , 	.vectorMenu h3
 
-    {
-        display         : block;
-        background-color: hsl(0, 0%, 30%) !important;
-        border-radius   : 2px;
-        margin          : 0 2px !important;
-        height          : auto !important;
-    }
-
-        .vectorTabs ul li:hover a
-    , 	.vectorMenu h3:hover
-    {
-        color: white !important;
-    }
-
-    .vectorTabs ul li.selected {
+    .off-vector-menu-tabs ul li.selected {
             background-color: 	hsl(0, 0%, 55%) !important;	
             box-shadow: none !important;
     }
     
-    .vectorTabs ul li.selected a {
+    .off-vector-menu-tabs ul li.selected a {
         font-weight     : bold;
     }
 
@@ -294,6 +306,9 @@
     /* --------------< IMAGES >-------------- */
 
     #p-logo a.mw-wiki-logo[href*="/wiki/"] {
+        /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Wikipedia-logo_%28inverse%29.png") !important; */
+        /* background-size: 70% !important; */
+        /* background-position-y: 20%; */
         filter: invert(1);
     } 
     img {
@@ -347,4 +362,3 @@
     ul {
         list-style-image: initial !important;
     }
-}
