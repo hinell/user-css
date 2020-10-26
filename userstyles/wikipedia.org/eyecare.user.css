@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name         Wikipedia Dark Theme
-@description  Dark theme for gnu software, make manual
+@description  Dark theme for gnu soft~re, make manual
 @namespace    hinell/styles/wikipedia
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.0
+@version      1.0.2
 @license      MIT
 ==/UserStyle== */
 /* --------------< GENERAL BACKGROUND & COLOR >-------------- */
@@ -147,13 +147,15 @@
     , 	.off-vector-menu h3
     ,   #mw-head #left-navigation  #p-namespaces ul.vector-menu-content-list li
     ,   #mw-head #right-navigation #p-views      ul.vector-menu-content-list li
-
+    ,   #mw-head #right-navigation #p-cactions   h3
+    ,   #mw-head #right-navigation #p-twinkle    h3
     {
         display         : block;
         background-color: hsl(0, 0%, 30%) !important;
         background-image: none !important;
         border-radius   : 2px;
         margin          : 0 2px !important;
+        padding         : 0 !important;
         height          : 1.8em !important;
         line-height     : 2em !important;
         transition      : color 500ms;
@@ -162,6 +164,8 @@
     /* Invidial tabs, links */
         #mw-head #left-navigation  #p-namespaces ul.vector-menu-content-list li a
     ,   #mw-head #right-navigation #p-views      ul.vector-menu-content-list li a
+    ,   #mw-head #right-navigation #p-cactions   h3 span
+    ,   #mw-head #right-navigation #p-twinkle    h3 span
     {
         color           : white !important;
         height          : auto !important;
@@ -171,6 +175,12 @@
         font-weight     : 300;
         transition      : color 500ms;
     }
+    /* Hide STAR */
+        #mw-head #right-navigation #p-views      ul.vector-menu-content-list li#ca-watch a::before
+    {
+        display:none;
+    }
+    
     /* Invidial tabs, links visited */
         #mw-head #left-navigation  #p-namespaces ul.vector-menu-content-list li a
     ,   #mw-head #right-navigation #p-views      ul.vector-menu-content-list li a
