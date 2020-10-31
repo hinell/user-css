@@ -25,10 +25,16 @@
         --box-color         : #777;
         --default-color     : #d1d1d1;
         --font-size         : 14px;
+        --code-font-family  : "JetBrains Mono", Lato, monospace, sans-serif;
         --link-color-hover  : hsl(0, 60%, 100%);
         --link-color-base   : hsl(20, 75%, 40%);
         --link-color-visited: hsl(20, 100%, 75%);
         --link-color-new    : hsl(0, 100%, 45%);
+
+        --code-keyword1-color   : hsl(41, 100%, 75%);
+        --code-keyword2-color   : hsl(30, 50%, 45%);
+        --code-keyword4-color   : hsl(166, 35%, 70%);
+        --code-punctuation-color: hsla(22, 91%, 48%);
     }
 
       body
@@ -36,6 +42,7 @@
     , #bodyContent p > *
     {
         font-size: var(--font-size) !important;
+        font-family: sans-serif;
     }
     
     /* Contents Page */
@@ -75,7 +82,6 @@
     
     a:hover {
         color: var(--link-color-hover) !important;
-        text-decoration: none !important;
     }
     
     a:visited {
@@ -244,25 +250,40 @@
         color: var(--default-color);
     }
     
+    /* ##### CPP Source code highlight ##### */
+
     /* template, conditional, loop keywords */
-    .cpp.source-cpp .kw1 {
-        color: #4fa2b3;
+        .cpp
+    ,   .cpp.source-cpp
+    {
+        font-family: var(--code-font-family) !important;
     }
     
-    /* --------------< CPP Source code highlight >-------------- */
+    .cpp.source-cpp .kw1
+    {
+        color: var(--code-keyword1-color) !important;
+    }
+
+    /* ##### Standard-revision-colors ##### */
+    .t-mark, .t-mark-rev {
+        color: hsl(120, 100%, 75%) !important;
+    }
+
 
     /* Number literal */
-    .cpp.source-cpp .nu12  {
-        color: #039bc1;
+       .cpp.source-cpp span[class*="nu"]
+    {
+        color: hsl(191, 57%, 62%);
     }
+    
     /* bool */
     .cpp.source-cpp .kw2 {
-        color: #84c103;
+        color: var(--code-keyword2-color) !important;
     }
     
     /* keyword */
     .cpp.source-cpp .kw4 {
-        color: #ac7339;
+        color: var(--code-keyword4-color) !important;
     }
     
     /* numeric literal 1 */
@@ -276,7 +297,7 @@
     
     /* comparison & shift operators */
     .cpp.source-cpp .sy1 {
-        color: #4b7ea5;
+        color: var(--code-punctuation-color) !important;
     }
     
     /* indirection, increment, decrement operators */
@@ -287,6 +308,15 @@
     /* not operator */
     .cpp.source-cpp .sy3 {
         color: #4fa2b3;
+    }
+    
+    /* semicolon */
+    .cpp.source-cpp .sy4 {
+        color: var(--code-punctuation-color) !important;
+    }
+    /* Bracket */
+    .cpp.source-cpp .br0 {
+        color: var(--code-punctuation-color) !important;
     }
     
     .mw-geshi a {
