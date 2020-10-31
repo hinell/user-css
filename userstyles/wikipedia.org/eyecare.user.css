@@ -1,14 +1,26 @@
 /* ==UserStyle==
 @name         Wikipedia Dark Theme
 @description  Dark theme for gnu soft~re, make manual
-@namespace    hinell/styles/wikipedia
+@namespace    https://github.com/hinell/userstyles/wikipedia
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
 @version      1.0.2
 @license      MIT
 ==/UserStyle== */
 /* --------------< GENERAL BACKGROUND & COLOR >-------------- */
+@namespace url(http://www.w3.org/1999/xhtml);
 @-moz-document regexp("(https?:\/\/)([a-zA-Z\-]+\.)(wik(ipedia|imedia|tionary|ibooks)\.org)(.*)"){
+
+    :root {
+        --background-color  : hsl(0, 0%, 12%);
+        --font-size         : 12px
+        --link-color-hover  : hsl(0, 60%, 100%);
+        --link-color-base   : hsl(20, 75%, 40%);
+        --link-color-visited: hsl(20, 50%, 40%);
+        --link-color-new    : hsl(0, 100%, 45%);
+    }
+    
+
         html
     ,	body
     ,	#content
@@ -75,8 +87,8 @@
     , 	.suggestions .suggestions-special *
     {
 
-        background      : hsl(0, 0%, 12%) !important;
-        background-color: hsl(0, 0%, 12%) !important;
+        background      : var(--background-color) !important;
+        background-color: var(--background-color) !important;
         color           : hsl(0, 0%, 60%) !important;
     }
     
@@ -129,7 +141,7 @@
         text-align : center;
         font-family: -apple-system, system-ui, Segoe UI, Lato, Tahoma, sans-serif;
         color      : hsl(0, 0%, 60%) !important;
-        font-size  : 12px;
+        font-size  : var(--font-size) !important;
         /* opacity    : 0; */
         /* transition : color 1s 1s; */
     }
@@ -192,7 +204,7 @@
         #mw-head #left-navigation  #p-namespaces ul.vector-menu-content-list li:hover a
     ,   #mw-head #right-navigation #p-views      ul.vector-menu-content-list li:hover a
     {
-        color           : hsl(20, 75%, 40%) !important;
+        color           : var(--link-color-base) !important;
 
     }
 
@@ -254,7 +266,7 @@
     ,	.oo-ui-window-body a
     ,	.reference
     {
-            color              : hsl(20, 75%, 40%) !important;
+            color              : var(--link-color-base) !important;
             transition-duration: 500ms;
             transition-property: color;
 
@@ -266,16 +278,16 @@
     }
 
     a:hover {
-            color          : hsl(0, 60%, 100%) !important;
+            color          : var(--linkc-color-hover) !important;
             text-decoration: none !important;
     }
 
     a:visited {
-        color: hsl(20, 50%, 40%) !important;
+        color: var(--link-color-visited) !important;
     }
     
     p a.new {
-        color: hsl(0, 100%, 45%) !important;
+        color: var(--link-color-new) !important;
     }
     
     p a.new:visited {
