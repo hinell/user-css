@@ -1,8 +1,16 @@
 {
-  "name": "@userstyles/gnu-docs-man",
+  "name": "@hinell-user-css/gnu-org",
   "version": "1.0.0",
   "private": true,
   "description": "GNU Man pages Dark Mode",
+  "keywords": [
+    "user",
+    "css",
+    "styles",
+    "dark",
+    "theme",
+    "stylus"
+  ],
   "author": "Hinell <al.neodim@gmail.com>",
   "homepage": "",
   "license": "ISC",
