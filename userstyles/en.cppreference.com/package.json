@@ -1,0 +1,31 @@
+{
+  "name": "@hinell-user-css/en-cppreference-com",
+  "version": "1.0.0",
+  "description": "User css for en.cppreference.com",
+  "keywords": [
+    "user",
+    "css",
+    "styles",
+    "dark",
+    "theme",
+    "stylus"
+  ],
+  "author": "Hinell <al.neodim@gmail.com>",
+  "homepage": "https://github.com/hinell/userstyles",
+  "license": "MIT",
+  "main": "",
+  "directories": {},
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hinell/user-css.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/hinell/user-css/issues"
+  }
+}
