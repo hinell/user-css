@@ -17,6 +17,8 @@
 {
     :root {
         --background-color  : hsl(0, 0%, 12%);
+        /* Borrowed idea from https://github.com/itmeo/webgradients */
+        --background-image  : linear-gradient(to top, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 14%) 100%);
         --darker-bkgd-color : #282828;
         --lighter-bkgd-color: #404040;
         --table-bkgd-color  : #474747;
@@ -27,10 +29,10 @@
 
         --code-font-family  : "JetBrains Mono", Lato, sans-serif;
 
-        --link-color-base   : hsl(23, 100%, 50%);
+        --link-color-base   : hsl(11, 89%, 65%);
         --link-color-hover  : hsl(0, 60%, 100%);
-        --link-color-new    : hsl(0, 100%, 45%);
-        --link-color-visited: hsl(23, 100%, 70%);
+        --link-color-new    : hsl(11, 97%, 56%);
+        --link-color-visited: hsl(11, 100%, 80%);
 
         --code-keyword1-color   : hsl(41, 100%, 75%);
         --code-keyword2-color   : hsl(30, 50%, 45%);
@@ -40,8 +42,9 @@
 
     /** Site-specific **/
     div.contents {
-        background-color: var(--darker-bkgd-color);
-
+        /* background-color: var(--darker-bkgd-color); */
+        background-image: var(--background-image) !important;
+        background-blend-mode: multiply;
     }
     
       body
@@ -54,23 +57,27 @@
     
     /* Contents Page */
     .mainpagetable tr.row td {
-        background-color: var(--background-color); /* #3f3f3f; */
+        background-image: var(--background-image) !important;
+        background-blend-mode: multiply;
     }
     
     /* for below Footer */
     body {
-        background-color: var(--background-color);
+        background-image: var(--background-image) !important;
+        background-blend-mode: multiply;
     }
     
     /* Page Background */
     div#cpp-content-base {
-        background-color: var(--background-color);
+        background-image: var(--background-image) !important;
+        background-blend-mode: multiply;
     }
     
     /* Page text */
     div#content {
         color: var(--default-color) !important;
-        background-color: var(--background-color); /* #3f3f3f; */
+        background-image: var(--background-image) !important;
+        background-blend-mode: multiply;
         margin: auto !important;
     }
     
