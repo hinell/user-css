@@ -1,11 +1,14 @@
 {
+  "version": "1.1.0",
   "command": {
     "publish": {
-        "ignoreChanges": ["*.md", "*.jpg"]
+        "ignoreChanges": ["*.md", "*.jpg", "*.png", "*.ico"]
+    },
+    "version": {
+      "allowBranch": ["master"]
     }
   },
-  "packages": [
+  "packages": [ 
     "userstyles/*"
-  ],
-  "version": "independent"
+  ]
 }

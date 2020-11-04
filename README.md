@@ -50,6 +50,10 @@ The following stylesheets are listed under [`./userstyles/`](./userstyles/):
 
 It's any [css] file that is specifically named (suffixed) by `.user.css` extension. Such files typically special header at the top. More info can be found here [here][styles-user-css].
 
+## TODO
+* add common palette
+* add sass
+# remove lerna (aging project)
 
 ## Contribute
 [contribute]: #contribute
