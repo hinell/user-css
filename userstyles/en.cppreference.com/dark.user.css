@@ -5,7 +5,7 @@
 @namespace    https://github.com/hinell/user-css/en.cppreference.com
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.3
+@version      1.0.4
 @license      MIT
 ==/UserStyle== */
 
@@ -13,7 +13,7 @@
 @-moz-document  domain("cppreference.com"),
                 url-prefix("file:///usr/share/doc/cppreference-doc/"),
                 url-prefix("file:///usr/local/share/doc/cppreference-doc/"),
-                regexp("file:(\/share\/doc)?\/\/\/.*cppreference\/doc\/html\/en\/.*\.html$")
+                regexp("file:(\/share\/doc)?\/\/\/.*cppreference\/doc\/html\/en\/.*\.html(#.*)?$")
 {
     :root {
         --background-color  : hsl(0, 0%, 12%);

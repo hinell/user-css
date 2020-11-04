@@ -1,6 +1,7 @@
 {
   "name": "@hinell-user-css/en-cppreference-com",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "private": true,
   "description": "User css for en.cppreference.com",
   "keywords": [
     "user",
