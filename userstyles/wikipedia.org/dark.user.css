@@ -12,18 +12,46 @@
 @-moz-document regexp("(https?:\/\/)([a-zA-Z\-]+\.)(wik(ipedia|imedia|tionary|ibooks)\.org)(.*)"){
 
     :root {
-        --background-color  : hsl(0, 0%, 12%);
-        --font-size         : 12px
+        --background-image  : linear-gradient(to top, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 14%) 100%);
+        /* --background-color  : hsl(0, 0%, 12%); */
+        --font-size         : 12px;
+        
         --link-color-hover  : hsl(0, 60%, 100%);
-        --link-color-base   : hsl(20, 75%, 40%);
-        --link-color-visited: hsl(20, 50%, 40%);
-        --link-color-new    : hsl(0, 100%, 45%);
+        --link-color        : hsl(15, 55%, 45%);
+        --link-color-new    : hsl(15, 100%, 45%);
+        --link-color-visited: hsl(15, 60%, 45%);
+        
+        --footer-message    : " • Wikipedia Dark Mode by Hinell@github.com • 2019 • v1.3.7 ";
     }
     
-
+    
         html
-    ,	body
-    ,	#content
+    ,   body
+    ,   body > #content
+    {
+        display: block !important;
+    }
+    
+        #mw-page-base
+    ,   #mw-head-base
+    ,   body
+    {
+        background-image: none !important;
+        background-color: transparent !important;
+    }
+        html
+    {
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-image: var(--background-image) !important;
+        background-attachment: fixed;
+        /* background-color: grey !important; */
+    }
+
+ 
+
+        #content
     ,	#footer *
     /* ,   [class*="mw-"]:not(.mw-wiki-logo):not(.mw-headline):not(.cm-mw-ext-ground):not(.cm-mw-doubleUnderscore) */
     ,   #pt-userpage [class*="oo-"]
@@ -38,7 +66,7 @@
 
     /* French specific START */
     ,	.homonymie
-    ,	.bandeau-section
+    ,	.bandeau-sectionO
     ,	.autres-projets
     /* French specific END */
     
@@ -86,9 +114,8 @@
     , 	.suggestions .suggestions-special
     , 	.suggestions .suggestions-special *
     {
-
-        background      : var(--background-color) !important;
-        background-color: var(--background-color) !important;
+        /* background-color: var(--background-color) !important; */
+        background-color: transparent !important;
         color           : hsl(0, 0%, 60%) !important;
     }
     
@@ -99,17 +126,16 @@
     ,	.oo-ui-widget .mw-widget-calendarWidget-day-today
     ,	.suggestions-results .suggestions-result.suggestions-result-current
     {
-        background      : hsl(0, 0%, 30%) !important;
-        background-color: hsl(0, 0%, 30%) !important;
+        background-color: transparent !important;
         color           : hsl(0, 0%, 60%) !important;
     }
     
         .mwe-math-fallback-image-inline
     {
-        background-color: hsl(0, 0%, 50%) !important;
+        background-color: transparent !important;
 
     }
-    /* --------------< HEADING CONTROLS >-------------- */
+    /* --------------< Header: nav pane >-------------- */
         
 
         #mw-head .vectorMenu h3
@@ -135,7 +161,7 @@
 
     /* #footer-info-copyright:after { */
     #footer-places li:last-child:after {
-        content    : " • Wikipedia Dark Mode by Hinell@github.com • 2019 • v1.3.5 ";
+        content    : var(--footer-message) !important;
         /* position   : absolute; */
         /* top        : 120px; */
         text-align : center;
@@ -151,8 +177,39 @@
         /* opacity: 0.6; */
     }
     
-    
-    /* --------------< Control panel (tabs: artcle, talk, read, edit etc) >-------------- */
+    /* --------------< Header: inputs >-------------- */
+
+    #searchform {
+        margin: 0 !important;
+    }
+
+    #searchInput {
+        transition-property: all;
+        transition-duration: 500ms;
+    }
+
+    #searchInput {
+        background-color: hsl(0, 0%, 35%) !important;
+        color           : hsl(0, 0%, 60%) !important;
+        outline         : none !important;
+        border          : none !important;
+    }
+
+    #searchInput::placeholder {
+        color           : hsl(0, 0%, 70%) !important;
+    }
+
+    #searchInput:focus {
+        color     : hsl(0, 0%, 100%) !important;
+        background-color: hsl(0, 0%, 50%) !important;
+        box-shadow: none !important;
+    }
+
+    #searchInput:focus::placeholder {
+        color     : hsl(0, 0%, 100%) !important;
+    }
+
+    /* --------------< Controls pane: (tabs: article, talk, read, edit etc) >-------------- */
 
     /* Invidial tabs */
         .off-vector-menu-tabs ul li
@@ -204,7 +261,7 @@
         #mw-head #left-navigation  #p-namespaces ul.vector-menu-content-list li:hover a
     ,   #mw-head #right-navigation #p-views      ul.vector-menu-content-list li:hover a
     {
-        color           : var(--link-color-base) !important;
+        color           : var(--link-color) !important;
 
     }
 
@@ -266,7 +323,7 @@
     ,	.oo-ui-window-body a
     ,	.reference
     {
-            color              : var(--link-color-base) !important;
+            color              : var(--link-color) !important;
             transition-duration: 500ms;
             transition-property: color;
 
@@ -294,47 +351,8 @@
         color: hsl(0, 100%, 30%) !important;
     }
 
-    /* --------------< INPUTS >-------------- */
-
-    #searchform {
-        margin: 0 !important;
-    }
-
-    #searchInput {
-        transition-property: all;
-        transition-duration: 500ms;
-    }
-
-    #searchInput {
-        background-color: hsl(0, 0%, 35%) !important;
-        color           : hsl(0, 0%, 60%) !important;
-        outline         : none !important;
-        border          : none !important;
-    }
-
-    #searchInput::placeholder {
-        color           : hsl(0, 0%, 70%) !important;
-    }
-
-    #searchInput:focus {
-        color     : hsl(0, 0%, 100%) !important;
-        background-color: hsl(0, 0%, 50%) !important;
-        box-shadow: none !important;
-    }
-
-    #searchInput:focus::placeholder {
-        color     : hsl(0, 0%, 100%) !important;
-    }
-
-
     /* --------------< IMAGES >-------------- */
 
-    #p-logo a.mw-wiki-logo[href*="/wiki/"] {
-        /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Wikipedia-logo_%28inverse%29.png") !important; */
-        /* background-size: 70% !important; */
-        /* background-position-y: 20%; */
-        filter: invert(1);
-    } 
     img {
         border: none !important;
     }
@@ -386,4 +404,19 @@
     ul {
         list-style-image: initial !important;
     }
+
+
+    /* --------------< Left Sidebar: Nav pane  >--------------*/
+
+    #mw-navigation > nav > h3 {
+        background-image: none !important;
+        background-color: transparent !important;
+    }
+
+    #mw-navigation #p-logo a.mw-wiki-logo[href*="/wiki/"] {
+        /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Wikipedia-logo_%28inverse%29.png") !important; */
+        /* background-size: 70% !important; */
+        /* background-position-y: 20%; */
+        filter: invert(1);
+    } 
 }

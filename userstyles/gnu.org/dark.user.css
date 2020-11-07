@@ -4,15 +4,43 @@
 @namespace    https://github.com/hinell/userstyles/gnu-docs-man
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.0
+@version      1.0.2
 @license      MIT
 ==/UserStyle== */
 
-@-moz-document regexp("^https:\\/\\/www.gnu.org\\/software\\/make\\/manual\\/.*") {
+@-moz-document
+        regexp("^https:\\/\\/www.gnu.org\\/software\\/\\w+\\/manual\\/.*")
+{
+    :root {
+        --background-color  : hsl(0, 0%, 12%);
+        /* Borrowed idea from https://github.com/itmeo/webgradients */
+        --background-image  : linear-gradient(to top, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 14%) 100%);
+        --darker-bkgd-color : #282828;
+        --lighter-bkgd-color: #404040;
+        --table-bkgd-color  : #474747;
+        --border-color      : #666;
+        --box-color         : #777;
+
+        --text-color        : #d1d1d1;
+        --text-font-size    : 14px;
+
+        --code-font-family  : "JetBrains Mono", Lato, sans-serif;
+
+        --link-color-hover  : hsl(0, 60%, 100%);
+        --link-color        : hsl(15, 55%, 45%);
+        --link-color-new    : hsl(15, 100%, 45%);
+        --link-color-visited: hsl(15, 60%, 45%);
+
+        --code-keyword1-color   : hsl(41, 100%, 75%);
+        --code-keyword2-color   : hsl(30, 50%, 45%);
+        --code-keyword4-color   : hsl(166, 35%, 70%);
+        --code-punctuation-color: hsla(22, 91%, 48%);
+    }
+
     html, body {
         --default-fonts: system-ui, -apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;
-        background: hsl(0, 0%, 10%) !important; 
-        color: white !important;
+        background: var(--background-color) !important; 
+        color: var(--text-color) !important;
         font-family: var(--default-fonts) !important;
     }
     
@@ -54,21 +82,28 @@
     /* Links  */
     a[href]
     {
-        color: hsl(20, 75%, 40%) !important;
+        color: var(--link-color) !important;
     }
     
     a[href]:visited
     {
-        color: hsl(20, 55%, 40%) !important;
+        color: var(--link-color-visited) !important;
     }
     
     a[href]:hover
     {
-        color: hsl(0, 0%, 100%)
+        color: var(--link-color-hover) !important;
     }
     
     p, h1, h2, h3, h4
     {
-        color: white;
+        color: var(--text-color) !important;
     }
+    
+     .node   a[href]
+    ,.header a[href]
+    {
+        background: none !important;
+        background-color: transparent !important;
     }
+}

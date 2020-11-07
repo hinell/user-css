@@ -5,7 +5,7 @@
 @namespace    https://github.com/hinell/user-css/en.cppreference.com
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.4
+@version      1.0.5
 @license      MIT
 ==/UserStyle== */
 
@@ -24,16 +24,17 @@
         --table-bkgd-color  : #474747;
         --border-color      : #666;
         --box-color         : #777;
-        --default-color     : #d1d1d1;
-        --font-size         : 14px;
+     
+        --text-color        : #d1d1d1;
+        --text-font-size    : 14px;
 
         --code-font-family  : "JetBrains Mono", Lato, sans-serif;
 
-        --link-color-base   : hsl(11, 89%, 65%);
         --link-color-hover  : hsl(0, 60%, 100%);
-        --link-color-new    : hsl(11, 97%, 56%);
-        --link-color-visited: hsl(11, 100%, 80%);
-
+        --link-color        : hsl(15, 55%, 45%);
+        --link-color-new    : hsl(15, 100%, 45%);
+        --link-color-visited: hsl(15, 60%, 45%);
+        
         --code-keyword1-color   : hsl(41, 100%, 75%);
         --code-keyword2-color   : hsl(30, 50%, 45%);
         --code-keyword4-color   : hsl(166, 35%, 70%);
@@ -51,7 +52,7 @@
     , #bodyContent
     , #bodyContent p > *
     {
-        font-size: var(--font-size) !important;
+        font-size: var(--text-font-size) !important;
         font-family: sans-serif;
     }
     
@@ -75,7 +76,7 @@
     
     /* Page text */
     div#content {
-        color: var(--default-color) !important;
+        color: var(--text-color) !important;
         background-image: var(--background-image) !important;
         background-blend-mode: multiply;
         margin: auto !important;
@@ -92,7 +93,7 @@
     
     /* Link */
     a {
-        color: var(--link-color-base) !important
+        color: var(--link-color) !important
     }
     
     a:hover {
@@ -124,7 +125,7 @@
     }
     
     div#cpp-head-personal a {
-        color: var(--link-color-base) !important;
+        color: var(--link-color) !important;
     }
     
 
@@ -135,7 +136,7 @@
     }
     
     div#simpleSearch input#searchInput {
-        color: var(--default-color);
+        color: var(--text-color);
     }
     
     div#simpleSearch button#searchButton img {
@@ -183,7 +184,7 @@
     }
     
     div.vectorTabs ul li a {
-        color: var(--default-color) !important;
+        color: var(--text-color) !important;
     }
     
     /* div.vectorTabs ul li.selected{
@@ -191,7 +192,7 @@
     } */
     
     div.vectorTabs li.selected a, div.vectorTabs li.selected a:visited {
-        color: var(--default-color);
+        color: var(--text-color);
     }
     
     div.vectorMenu {
@@ -283,11 +284,11 @@
     }
     
     div#footer ul li {
-        color: var(--default-color);
+        color: var(--text-color);
     }
     
     h1, h2, h3, h4, h5, h6 {
-        color: var(--default-color);
+        color: var(--text-color);
         padding: 2em 0 0 !important;
         position: relative !important;
         left: -1.5em !important;
@@ -375,7 +376,7 @@
     }
     
     pre {
-        color: var(--default-color);
+        color: var(--text-color);
     }
     
     pre, div.mw-geshi {
@@ -389,7 +390,7 @@
     
     /**** Table *****/
     table.wikitable {
-        color: var(--default-color);
+        color: var(--text-color);
         background-color: var(--darker-bkgd-color);
     }
     
@@ -431,7 +432,7 @@
     }
     
     span[style="font-size:0.9em; color: #505050;"] {
-        color: var(--default-color) !important;
+        color: var(--text-color) !important;
     }
     
     /* green, purple header rows */
@@ -487,7 +488,7 @@
 
     /* Members - std::is_trivial */
     .t-inherited {
-        color: var(--default-color);
+        color: var(--text-color);
         background-color: var(--darker-bkgd-color);
     }
 
@@ -539,7 +540,7 @@
     td.diff-context {
         background-color: var(--darker-bkgd-color);
         border-color: var(--border-color);
-        color: var(--default-color);
+        color: var(--text-color);
     }
     
     .diffchange {

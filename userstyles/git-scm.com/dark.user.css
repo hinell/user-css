@@ -10,10 +10,37 @@
 
 @-moz-document regexp(".*\\/share\\/doc\\/git-doc\\/.*")
 {
-    body {
-        background: hsl(0, 0%, 15%);
-        color: hsl(0, 0%, 100%) !important;
+    :root {
+        --background-color  : hsl(0, 0%, 12%);
+        /* Borrowed idea from https://github.com/itmeo/webgradients */
+        --background-image  : linear-gradient(to top, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 14%) 100%);
+        --darker-bkgd-color : #282828;
+        --lighter-bkgd-color: #404040;
+        --table-bkgd-color  : #474747;
+        --border-color      : #666;
+        --box-color         : #777;
+     
+        --text-color        : #d1d1d1;
+        --text-font-size    : 14px;
+
+        --code-font-family  : "JetBrains Mono", Lato, sans-serif;
+
+        --link-color        : hsl(9, 100%, 70%);
+        --link-color-hover  : hsl(0, 60%, 100%);
+        --link-color-new    : hsl(9, 100%, 65%);
+        --link-color-visited: hsl(9, 60%, 65%);;
+
+        --code-keyword1-color   : hsl(41, 100%, 75%);
+        --code-keyword2-color   : hsl(30, 50%, 45%);
+        --code-keyword4-color   : hsl(166, 35%, 70%);
+        --code-punctuation-color: hsla(22, 91%, 48%);
     }
+
+    body {
+        background-image: var(--background-image) !important;
+        color           : var(--text-color) !important;
+    }
+    
     .verseblock pre,
     .admonitionblock > table td.content,
     #header > h1:first-child,
