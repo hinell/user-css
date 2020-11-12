@@ -18,64 +18,64 @@
   "author": "Alexander Davronov hinell@github.com <al.neodimg@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "commitizen": "^4.2.1",
-    "conventional-changelog-cli": "^2.1.0",
+    "commitizen": "^4.2.2",
+    "conventional-changelog-cli": "^2.1.1",
     "cz-conventional-changelog": "^3.3.0",
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "standard-version": "^9.0.0"
   },
-  "dependencies": {},
   "config": {
-        "commitizen": {
-            "path": "cz-conventional-changelog",
-            "maxHeaderWidth": 100,
-            "maxLineWidth": 100,
-            "defaultType": "refactor",
-            "defaultScope": "",
-            "defaultSubject": "",
-            "defaultBody": "",
-            "defaultIssues": "",
-            "types": {
-              "feat": {
-                "description": "Adds feature",
-                "title": "Features"
-              },
-              "bug": {
-                "description": "Fixes bug",
-                "title": "Bug Fixes"
-              },
-              "docs": {
-                "description": "Documentation related changes",
-                "title": "Documentation"
-              },
-              "style": {
-                "description": "Cosmetic changes, formatting: tabs, white-space, missing semi-colons, commas, etc",
-                "title": "Styles"
-              },
-              "refactor": {
-                "description": "Code refactoring",
-                "title": "Refactoring"
-              },
-              "perf": {
-                "description": "Improves performance",
-                "title": "Performance Improvements"
-              },
-              "test": {
-                "description": "Adds, removes or fixes tests",
-                "title": "Tests"
-              },
-              "ci": {
-                "description": "Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)",
-                "title": "Continuous Integrations"
-              },
-              "tool": {
-                "description": "Update tools config, scripts etc.",
-                "title": "Tooling"
-              },
-              "revert": {
-                "description": "Reverts a previous commit",
-                "title": "Reverts"
-              }
-            }
+    "commitizen": {
+      "path": "cz-conventional-changelog",
+      "maxHeaderWidth": 100,
+      "maxLineWidth": 100,
+      "defaultType": "refactor",
+      "defaultScope": "",
+      "defaultSubject": "",
+      "defaultBody": "",
+      "defaultIssues": "",
+      "types": {
+        "feat": {
+          "description": "Adds feature",
+          "title": "Features"
+        },
+        "bug": {
+          "description": "Fixes bug",
+          "title": "Bug Fixes"
+        },
+        "docs": {
+          "description": "Documentation related changes",
+          "title": "Documentation"
+        },
+        "style": {
+          "description": "Cosmetic changes, formatting: tabs, white-space, missing semi-colons, commas, etc",
+          "title": "Styles"
+        },
+        "refactor": {
+          "description": "Code refactoring",
+          "title": "Refactoring"
+        },
+        "perf": {
+          "description": "Improves performance",
+          "title": "Performance Improvements"
+        },
+        "test": {
+          "description": "Adds, removes or fixes tests",
+          "title": "Tests"
+        },
+        "ci": {
+          "description": "Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)",
+          "title": "Continuous Integrations"
+        },
+        "tool": {
+          "description": "Update tools config, scripts etc.",
+          "title": "Tooling"
+        },
+        "revert": {
+          "description": "Reverts a previous commit",
+          "title": "Reverts"
         }
+      }
     }
+  }
 }
