@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/gnu-docs-man
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.2
+@version      1.0.3 
 @license      MIT
 ==/UserStyle== */
 
@@ -23,14 +23,15 @@
 
         --text-color        : #d1d1d1;
         --text-font-size    : 14px;
-
-        --code-font-family  : "JetBrains Mono", Lato, sans-serif;
+        --text-font-family  : system-ui, -apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;
 
         --link-color-hover  : hsl(0, 60%, 100%);
         --link-color        : hsl(15, 55%, 45%);
         --link-color-new    : hsl(15, 100%, 45%);
         --link-color-visited: hsl(15, 60%, 45%);
 
+        --code-font-size        : 13px;
+        --code-font-family      : "JetBrains Mono", Lato, sans-serif;
         --code-keyword1-color   : hsl(41, 100%, 75%);
         --code-keyword2-color   : hsl(30, 50%, 45%);
         --code-keyword4-color   : hsl(166, 35%, 70%);
@@ -38,29 +39,27 @@
     }
 
     html, body {
-        --default-fonts: system-ui, -apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;
         background: var(--background-color) !important; 
         color: var(--text-color) !important;
-        font-family: var(--default-fonts) !important;
+        font-family: var(--text-font-family) !important;
     }
     
     
     /* Examples & Code */
-    pre {
-        color: black;
-    /*     font-family: var(--default-fonts); */
-        font-family: consolas;
+      pre     
+    , pre.menu-comment
+    {
+        font-weight: bold;
+        font-size: var(--code-font-size) !important;
+        background: hsl(0, 0%, 20%);
+        color: white;   
+        font-family: var(--code-font-family) !important;
     }
     
     pre.menu-comment {
-        font-weight: bold;
         text-transform: uppercase;
-        background: hsl(0, 0%, 20%);
-        color: white;
-        font-family: var(--default-fonts) !important;
+    
     }
-    
-    
     
     div.example {
         border-radius: 0px;
