@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/styles/twitter
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.0
+@version      1.0.2
 @license      MIT
 ==/UserStyle== */
 @-moz-document domain("twitter.com") {
@@ -16,8 +16,7 @@
     ,   div[data-testid="sidebarColumn"] > div:first-child > div:nth-child(2) > div > div > div > div:first-child
     ,   div[data-testid="sidebarColumn"] form[aria-label="Search Twitter"] *
     ,   main[role="main"]
-    ,   main[role="main"] > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:nth-child(2)
-    ,   main[role="main"] > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:nth-child(2) > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div > div
+    /* ,   main[role="main"] > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:nth-child(2) > div:nth-child(2) > div > div > div > div:nth-child(2) > div:nth-child(2) > div > div */
     
         /*Tweetdeck*/
     ,   html.dark .app-content
@@ -33,21 +32,42 @@
         
     }
     
-        div[aria-label="Timeline: Your Home Timeline"]
+
+    /* Messages panel/timeline */
+        #layers div[data-testid="DMDrawer"]
+    ,   #layers div[data-testid="DMDrawer"] > :first-child > :nth-child(2) > :first-child > :first-child
+    ,   #layers div[data-testid="DMDrawer"] > :first-child > :nth-child(2) > :first-child > :first-child > :first-child
+    ,   div[aria-label="Timeline: Messages"] > :first-child > * div[role="tab"]
+    /* Timeline */
+    ,   div[aria-label="Timeline: Your Home Timeline"]
     ,   div[aria-label="Timeline: Trending now"]
+
+    /*  */
     ,   aside[aria-label="Relevant people"]
     ,   aside[aria-label="Who to follow"]
+
+    /* Primarpy Column, Feed */
     ,   main div[data-testid="primaryColumn"]
         /*Tweet field (What's happening right noe?)*/
-    ,   main div[data-testid="primaryColumn"] > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child
-    
+    ,   main div[data-testid="primaryColumn"] > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child
+    /* Here we have to repeat nested eleements cause background color is specified two times  */
+    ,   main div[data-testid="primaryColumn"] > div:first-child > div:nth-child(2)
+    ,   main div[data-testid="primaryColumn"] > div:first-child > div:nth-child(2) > div:first-child > div:nth-child(2)
+    ,   main div[data-testid="primaryColumn"] nav[role="navigation"] div[role="tablist"]
+    /*  Feed/Quick message editor panel */
+    ,   main div[data-testid="primaryColumn"] div[data-testid="toolBar"]
     
     ,   section[aria-labelledby="accessible-list-0"]
     ,   section[aria-labelledby="accessible-list-1"]
     ,   section[aria-labelledby="accessible-list-2"]
     ,   article[role="article"] > div:first-child > div:nth-child(2) > div:first-child > div:nth-child(2)
-    ,   div[data-testid="primaryColumn"] nav[role="navigation"] div[role="tablist"]
     
+    /* Reply dialog */
+    , div[aria-labelledby="modal-header"][role="dialog"] > :first-child
+    , div[aria-labelledby="modal-header"][role="dialog"] > :first-child > :nth-child(2) > :first-child > :first-child
+    , div[aria-labelledby="modal-header"][role="dialog"] > :first-child > :nth-child(3) > :first-child > :first-child > :first-child
+    /* This one is everchangin, temprorary solution */
+    , .r-kemksi
     {
         background-color: hsl(0, 0%, 15%) !important;    
         border: none !important;    
@@ -84,7 +104,7 @@
     ,   [role="button"] span
     ,   a[role="link"] span
     {
-        color: hsl(10, 42%, 45%) !important
+        color: hsl(0deg 0% 75%) !important;
     }
     
         a[role="tab"] span
