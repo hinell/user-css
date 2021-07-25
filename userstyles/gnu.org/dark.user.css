@@ -65,9 +65,10 @@
     
     div.example {
         border-radius: 0px;
-        background: hsl(0, 0%, 40%) !important;
+        background: hsl(101, 29%, 48%) !important;
         border: none !important;
-        padding: 8px;
+        padding: 0;
+        padding-left: 0.4em;
         box-shadow: inset 0px 0px 2px 1px hsl(0, 0%, 10%);
     
     }
