@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/gnu-docs-man
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.4
+@version      1.0.5
 @license      MIT
 ==/UserStyle== */
 
@@ -106,6 +106,21 @@
     {
         background: none !important;
         background-color: transparent !important;
+    }
+
+    var, samp {
+        display: inline-block;
+        color: Coral;
+        color: sandybrown;
+        background-color: var(--darker-bkgd-color);
+        font-family: monospace;;
+        min-width: 2em;
+        text-align: center;
+        border-radius: 4px;
+    }
+
+    dt code {
+        color: skyblue  ;
     }
 }
 
