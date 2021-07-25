@@ -1,0 +1,130 @@
+/* ==UserStyle==
+@name         ZSH Manuals Dark Theme by Hinell
+@description  Dark theme for gnu software, make manual
+@namespace    https://github.com/hinell/userstyles/gnu-docs-man
+@homepageURL  https://github.com/hinell
+@author       Hinell <neodim@gmail.com> (https://github.com/hinell)
+@version      1.0.0
+@license      MIT
+==/UserStyle== */
+
+@-moz-document
+        regexp("^https:\/\/zsh.sourceforge.io\/Doc\/Release\/.*\.html(#.*)?"),
+        regexp("^file:.*\/devdocs\/zsh\/(zsh_)?html\/.*\.html(#.*)?")
+{
+    :root {
+        --background-color  : hsl(0, 0%, 12%);
+        /* Borrowed idea from https://github.com/itmeo/webgradients */
+        --background-image  : linear-gradient(to top, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 14%) 100%);
+        --darker-bkgd-color : #282828;
+        --lighter-bkgd-color: #404040;
+        --table-bkgd-color  : #474747;
+        --border-color      : #666;
+        --box-color         : #777;
+
+        --text-color        : #d1d1d1;
+        --text-font-size    : 14px;
+        --text-font-family  : system-ui, -apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;
+
+        --link-color-hover  : hsl(0, 60%, 100%);
+        --link-color        : hsl(15, 55%, 45%);
+        --link-color-new    : hsl(15, 100%, 45%);
+        --link-color-visited: hsl(15, 60%, 45%);
+
+        --code-font-size        : 13px;
+        --code-font-family      : "JetBrains Mono", Lato, sans-serif;
+        --code-keyword1-color   : hsl(41, 100%, 75%);
+        --code-keyword2-color   : hsl(30, 50%, 45%);
+        --code-keyword4-color   : hsl(166, 35%, 70%);
+        --code-punctuation-color: hsla(22, 91%, 48%);
+    }
+
+    html, body {
+        background: var(--background-color) !important; 
+        color: var(--text-color) !important;
+        font-family: var(--text-font-family) !important;
+        border: none !important;
+    }
+    
+    body {
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    /* Examples & Code */
+      pre     
+    , pre.menu-comment
+    {
+        font-weight: bold;
+        font-size: var(--code-font-size) !important;
+        background: hsl(0, 0%, 20%);
+        color: white;   
+        font-family: var(--code-font-family) !important;
+    }
+    
+    pre.menu-comment {
+        text-transform: uppercase;
+    
+    }
+    
+    div.example {
+        border-radius: 0px;
+        background: hsl(101, 29%, 48%) !important;
+        border: none !important;
+        padding: 0;
+        padding-left: 0.4em;
+        box-shadow: inset 0px 0px 2px 1px hsl(0, 0%, 10%);
+    
+    }
+    
+    div.example > pre.example {
+        border-radius: 0;
+        background: hsl(0, 0%, 15%) !important;
+        color: white;
+        padding: .8em 1.2em .4em;
+        box-shadow: 0px 0px 2px 1px hsl(0, 0%, 10%);
+    } 
+    
+    /* Links  */
+    a[href]
+    {
+        color: var(--link-color) !important;
+    }
+    
+    a[href]:visited
+    {
+        color: var(--link-color-visited) !important;
+    }
+    
+    a[href]:hover
+    {
+        color: var(--link-color-hover) !important;
+    }
+    
+    p, h1, h2, h3, h4, h5, h6, dt
+    {
+        color: var(--text-color) !important;
+    }
+    
+     .node   a[href]
+    ,.header a[href]
+    {
+        background: none !important;
+        background-color: transparent !important;
+    }
+
+    var, samp, p > tt {
+        display: inline-block;
+        color: Coral;
+        color: sandybrown;
+        background-color: var(--darker-bkgd-color);
+        font-family: monospace;;
+        min-width: 2em;
+        text-align: center;
+        border-radius: 4px;
+    }
+
+    dt code, dt > tt {
+        color: skyblue !important;
+    }
+}
