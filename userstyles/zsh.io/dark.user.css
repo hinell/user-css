@@ -10,7 +10,7 @@
 
 @-moz-document
         regexp("^https:\/\/zsh.sourceforge.io\/Doc\/Release\/.*\.html(#.*)?"),
-        regexp("^file:.*\/devdocs\/zsh\/(zsh_)?html\/.*\.html(#.*)?")
+        regexp("^file:.*\/[Dd]evdocs\/zsh\/(zsh_)?html\/.*\.html(#.*)?")
 {
     :root {
         --background-color  : hsl(0, 0%, 12%);

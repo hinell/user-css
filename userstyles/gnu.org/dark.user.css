@@ -10,7 +10,7 @@
 
 @-moz-document
         regexp("^https:\\/\\/www.gnu.org\\/software\\/\\w+\\/manual\\/.*"),
-        regexp("^file:.*\/devdocs\/bash\/.*\.html(#.*)?")
+        regexp("^file:.*\/[Dd]evdocs\/bash\/.*\.html(#.*)?")
 {
     :root {
         --background-color  : hsl(0, 0%, 12%);
@@ -126,7 +126,7 @@
 }
 
 @-moz-document
-        regexp("^file:.*\/devdocs\/bash\/.*\.html(#.*)?")
+        regexp("^file:.*\/[Dd]evdocs\/bash\/.*\.html(#.*)?")
 {
     body {
         width: 50%;
