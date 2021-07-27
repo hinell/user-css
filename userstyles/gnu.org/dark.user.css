@@ -129,7 +129,7 @@
         regexp("^file:.*\/[Dd]evdocs\/bash\/.*\.html(#.*)?")
 {
     body {
-        width: 50%;
+        max-width: 50%;
         margin: 0 auto;
     }
     
