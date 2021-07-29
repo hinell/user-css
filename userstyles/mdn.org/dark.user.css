@@ -114,10 +114,13 @@
         font-weight: 400;
     }
 
+    .main-page-content h1 a,
     .main-page-content h1 a:link,
     .main-page-content h1 a:visited,
+    .main-page-content h2 a,
     .main-page-content h2 a:link,
     .main-page-content h2 a:visited,
+    .main-page-content h3 a,
     .main-page-content h3 a:link,
     .main-page-content h3 a:visited {
         color: white !important;
@@ -133,8 +136,7 @@
     }
 
     a:visited,
-    .main-page-content  a:visited,
-    .main-page-content h1 a:hovevisited,
+    .main-page-content h1 a:visited,
     .main-page-content h2 a:visited,
     .main-page-content h3 a:visited
     {
@@ -164,7 +166,9 @@
     }
 
     /* Formal defintion */
-    .main-page-content .standard-table a:link {
+     .main-page-content .standard-table a 
+    ,.main-page-content .standard-table a:link
+    {
         background-color: transparent;
         font-weight: bold;
         color: var(--body-code-link-color) !important;
@@ -184,7 +188,8 @@
     }
 
     /* BODY TOP BUTTONS */
-     a:link.button.minimal
+     a.button.minimal
+    ,a:link.button.minimal
     ,a:visited.button.minimal
     {
         color: white !important;
@@ -317,8 +322,9 @@
         filter: invert(1);
     }
 
-    .breadcrumbs-container li a:link,
-    .breadcrumbs-container li a:visited
+     .breadcrumbs-container li a
+    ,.breadcrumbs-container li a:link
+    ,.breadcrumbs-container li a:visited
      {
         margin-right: .5em;;
         color: var(--nav-sidebar-link-color) !important;
@@ -326,8 +332,9 @@
      }
     
     /* BREADCRUMBS: CURRENT PAGE */
-    .breadcrumbs-container li a.breadcrumb-current-page:link,
-    .breadcrumbs-container li a.breadcrumb-current-page:visited
+     .breadcrumbs-container li a.breadcrumb-current-page
+    ,.breadcrumbs-container li a.breadcrumb-current-page:link
+    ,.breadcrumbs-container li a.breadcrumb-current-page:visited
      {
         color: var(--nav-link-color) !important;
      }
@@ -368,7 +375,8 @@
         background-color: #637490;
     }
 
-     .notecard p a:link
+     .notecard p a
+    ,.notecard p a:link
     ,.notecard p a:visited
     {
         color: black !important;
@@ -402,7 +410,8 @@
     }
 
 
-     ul.main-menu li ul a:link
+     ul.main-menu li ul a
+    ,ul.main-menu li ul a:link
     ,ul.main-menu li ul a:visited
     {
         font-weight: bold;;
@@ -428,7 +437,8 @@
         background-color: #4d6a78;
     }
 
-    .callout a:link
+     .callout a
+    ,.callout a:link
     ,.callout a:visited
      {
         color: black !important;
