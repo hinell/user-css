@@ -53,12 +53,10 @@ It's any [css] file that is specifically named (suffixed) by `.user.css` extensi
 ## TODO
 * add common palette
 * add sass
-# remove lerna (aging project)
 
 ## Contribute
 [contribute]: #contribute
-
-Good point to start with contribution is to checkout [`package.json`](./package.json) file scripts first. The projet is maintananed by following tools:
+See [DEVELOPMENT.md] file for more info. A good starting point with contribution is to checkout root [`package.json`](./package.json) file scripts first. The projet is maintananed by following tools:
 * `commitizen` - Handy tool to quickly build up git commit message
 * `lerna` - Manages monorepo projects
 
@@ -93,3 +91,5 @@ Copyright 2019 © Alexander Davronov &lt;al.neodim at gmail.com&gt;
 [stylus]: https://github.com/openstyles/stylus
 [styles-user-css]: https://github.com/openstyles/stylus/wiki/Writing-UserCSS
 [en-cppreference-archive]: https://en.cppreference.com/w/Cppreference:Archives
+
+[DEVELOPMENT.md]: ./DEVELOPMENT.md
