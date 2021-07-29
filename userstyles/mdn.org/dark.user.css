@@ -1,0 +1,413 @@
+/* ==UserStyle==
+@name         MDN Docs - Dark
+@description  Old-style MDN docs theme
+@namespace    https://github.com/hinell/userstyles/mdn.org
+@homepageURL  https://github.com/hinell
+@author       Hinell <neodim@gmail.com> (https://github.com/hinell)
+@version      1.0.2
+@license       TODO: Add THICK border around this license
+ MDN Docs - Default
+ Copyright (C) 2021- Alex A. Davronov <al.neodim@gmail.com>
+ 
+ Redistribution and (re)use of this Source or Binary code produced from such
+ regardless of the carrier with or without modification is permitted free of
+ charge (unless explicitly stated otherwise herewith) provided that
+ the following conditions are met:
+ 
+ 1. Redistributions of the Source code must retain the above
+    Copyright notice, this List of conditions, and the following
+    Disclaimer.
+ 
+ 2. Redistributions of the Binary code must reproduce the above
+    Copyright notice, this List of conditions, and the following
+    Disclaimer visible prominently and clearly to the user's eyes
+    within documentation provided with such distribution or at the
+    user request immediately.
+ 
+ 3. Failure to meet the List of condition set hereby terminates
+    unconditionally your rights and permissions granted by the above
+    Copyright notice and make you eligible for prosecution, lawsuit or any
+    legal actions or proceedings under appropritate law of country of your
+    residence or International law.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ DEALINGS IN THE SOFTWARE.
+==/UserStyle== */
+
+@-moz-document
+    regexp("https:\/\/developer.mozilla.org/en-US/.*"),
+    regexp(".*localhost:[56]\d{3}/en-US/.*")
+{
+    :root {
+        --background-color  : hsl(0deg 0% 20%);
+        --nav-bg-color      : hsl(0deg 0% 25%);
+        --nav-dropdown-bg-color: hsl(0deg 0% 35%);
+        --nav-dropdown-focus-bg-color: hsl(0deg 0% 50%);
+
+        /* Borrowed idea from https://github.com/itmeo/webgradients */
+        --background-image  : linear-gradient(to top, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 14%) 100%);
+
+        --body-bg-dark-0    : #282828;
+        --body-bg-dark-1    : #404040;
+        
+        --body-p-code-bg    : #404040;
+        --body-p-code-bg-light: #b1b1b1;
+        --body-code-bg      : #ffffff;
+        --body-code-link-hover : #ffffff;
+        --body-code-col     : rgb(26, 26, 26);
+        --body-code-link-color: hsl(15, 35%, 35%);
+
+        --table-bkgd-color  : #474747;
+        --border-color      : #666;
+        --box-color         : #777;
+     
+        --text-color        : #d1d1d1;
+        --text-font-size    : 14px;
+        --text-heading-4    : #d1d1d1;
+
+        --code-font-family  : "JetBrains Mono", Lato, sans-serif;
+
+        --link-color        : hsl(15, 42%, 50%);
+        --link-color-hover  : hsl(0, 60%, 100%);
+        --link-color-visited: hsl(16, 24%, 47%);
+        
+    }
+
+    .logo {
+        filter: invert(1);
+    }   
+
+     body
+    {
+        background-color: var(--background-color);
+        color: #dadada !important;
+    }
+
+
+    button {
+        color: white !important;
+    }
+
+    img {
+        background-color: white;
+    }
+
+    #sidebar-quicklinks {
+        text-indent: 6px;
+    }
+
+    /* --------------< LINKS >--------------      */
+    a:link,
+    a:visited,
+    .main-page-content  a:link,
+    .main-page-content  a:visited
+    {
+        text-decoration: none !important;
+        color: var(--link-color) !important;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .main-page-content h1 a:link,
+    .main-page-content h1 a:visited,
+    .main-page-content h2 a:link,
+    .main-page-content h2 a:visited,
+    .main-page-content h3 a:link,
+    .main-page-content h3 a:visited {
+        color: white !important;
+    }
+
+    a:hover,
+    .main-page-content a:hover,
+    .main-page-content h1 a:hover,
+    .main-page-content h2 a:hover,
+    .main-page-content h3 a:hover
+    {
+        color: var(--link-color-hover) !important;
+    }
+
+    a:visited,
+    .main-page-content  a:visited,
+    .main-page-content h1 a:hovevisited,
+    .main-page-content h2 a:visited,
+    .main-page-content h3 a:visited
+    {
+        color: var(--link-color-visited) !important;
+    }
+
+    .main-page-content .index code {
+        background-color: hsl(0deg 0% 22%) !important;
+    }
+
+    h1, h2, h3, h4 {
+        margin-bottom: 12px;
+        word-wrap: break-word;
+        font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+        font-weight: 200;
+        line-height: 1;
+        color: #c0c0c0;
+    }
+
+    h2 {
+        position: sticky;
+        top: 48px;
+        background: var(--background-color);
+        z-index: 2;
+    }
+
+    /* Formal defintion */
+    .main-page-content .standard-table a:link {
+        background-color: transparent;
+        font-weight: bold;
+        color: var(--body-code-link-color) !important;
+    }
+    .main-page-content .standard-table a:visited {
+        color: var(--link-color-visited) !important;
+    }
+    .main-page-content .standard-table a:hover {
+        font-weight: bold;  
+        color: black !important;
+    }
+    
+
+    a.page-not-created {
+        color: #db5b45;
+        cursor: not-allowed;
+    }
+    /* Formal syntax */
+    /* Examples */
+
+    /* BODY:CODE */
+    /* BODY:PRE */
+    code
+    , pre
+    ,.page-header-main
+    ,ul.main-menu
+    {
+        background-color: transparent ;
+    }
+
+    .main-page-content p code
+    ,.main-page-content li code
+    {
+        background-color: var(--body-p-code-bg) !important;
+        padding-top: 0.15em;
+        padding-right: 0.15em;
+        padding-left: 0.15em;
+    }
+
+    .main-page-content .standard-table p code
+    ,.main-page-content .standard-table li code
+    {
+        background-color: var(--body-p-code-bg-light) !important;
+        padding-top: 0.15em;
+        padding-right: 0.15em;
+        padding-left: 0.15em;
+    }
+
+     .main-page-content code a
+    ,.main-page-content code a:link
+    {
+        font-weight: bold;
+        color: var(--body-code-link-color) !important;
+    }
+
+     .main-page-content code a:hover
+    ,.main-page-content pre a:hover
+    {
+        color: var(--body-code-link-hover) !important;
+    }
+
+     .main-page-content a:hover code
+    ,.main-page-content a:hover pre
+    {
+        background-color: black !important;
+    }
+
+     .main-page-content p a code
+    ,.main-page-content p a pre
+    ,.main-page-content dd a code
+    ,.main-page-content dd a pre
+    {
+        background-color: var(--body-p-code-bg) !important;
+        padding: .1em;
+        border-radius: 2px;
+        color: var(--link-color) !important;
+    }
+
+    /* Html */
+    /* CSS */
+    /* JS */
+    /* Specifications */
+    /* Browser compatibility */
+    .standard-table,
+    iframe,
+    .main-page-content .code-example code,
+    .main-page-content .code-example pre,
+    table.properties,
+    .bc-table.bc-table-web
+    {
+        background-color: var(--body-code-bg) !important;
+        color: var(--body-code-col) !important;
+    }
+
+    .ic-prefix:before {
+        color: #ffffff;
+    }
+    /* --------------< HEADER >-------------- */
+     header.page-header {
+        padding: 0;
+     }
+     .page-header
+     ,.breadcrumb-locale-container
+    {
+        background-color: var(--nav-bg-color);
+    }
+
+    .breadcrumb-locale-container {
+        position: sticky;
+        top: 0px;
+        z-index: 3;
+    }
+    /* HEADER:ICONS */
+     .breadcrumbs-container li .breadcrumb-penultimate:after
+    ,.breadcrumbs-container li .breadcrumb:after
+    ,ul.main-menu .top-level-entry:before
+    {
+        filter: invert(1);
+    }
+
+    .breadcrumbs-container li a:link,
+    .breadcrumbs-container li a:visited
+     {
+        margin-right: .5em;;
+        color: hsl(198deg 55% 63%) !important;
+        font-weight: bold;
+     }
+    
+    /* CURRENT PAGE */
+    .breadcrumbs-container li a.breadcrumb-current-page:link,
+    .breadcrumbs-container li a.breadcrumb-current-page:visited
+     {
+        color: hsl(198deg 55% 90%) !important;
+     }
+
+
+    .notecard {
+        color: black !important;
+    }
+
+    .notecard .note {
+        background-color: #637490;
+    }
+
+    .notecard a:visited {
+        color: black !important;
+    }
+    
+    .notecard p code {
+        background-color: var(--body-p-code-bg-light) !important;
+    }
+    /* Technologies, Referecnes & Guides etc. */
+    /* Search field (on the right) */
+    #downshift-0-menu .search-results
+    ,ul.main-menu li ul
+    {
+        box-shadow: none;
+        border: none;
+    }
+     #downshift-0-menu > div
+    ,ul.main-menu li ul
+    {
+        background-color: var(--nav-dropdown-bg-color);
+        color: #ffffff;
+    }
+
+    /* Selected item on the search dropdown */
+     #downshift-0-menu .header-search .search-results .result-item.highlight
+    ,.header-search .search-results .result-item:hover
+    {
+            background-color: var(--nav-dropdown-focus-bg-color);
+    }
+
+
+     ul.main-menu li ul a:focus
+    ,ul.main-menu li ul a:hover {
+        background-color: var(--nav-dropdown-focus-bg-color);
+        color: #fff;
+        text-decoration: none;
+        outline: none;
+    }
+
+    /* --------------< BODY:LEFT >-------------- */
+    /* Table of Contents */
+
+    .sidebar .icon-deprecated
+    ,.icon.icon-deprecated {
+        color: rgb(190, 68, 38) !important;
+    }    
+    .sidebar .icon-nonstandard
+    ,.icon.icon-nonstandard {
+        color: rgb(38, 160, 190) !important;
+    }    
+
+    .sidebar .icon-experimental
+    ,.icon.icon-experimental {
+        color: rgb(38, 160, 190) !important;
+    }    
+    
+    /* --------------< BODY:RIGHT >-------------- */
+
+    /* BODY:ICONS */
+    a.external:after {
+        filter: invert(1);
+    }
+
+    .callout {
+        background-color: #4d6a78;
+    }
+
+    .callout a:link
+    ,.callout a:visited
+     {
+        color: black !important;
+    }
+
+     .callout h1
+    ,.callout h2
+    ,.callout h3
+    ,.callout h4
+    {
+        color: #000000 !important;
+    }
+
+    /* --------------< FOOTER >-------------- */
+    .metadata {
+        background-color: var(--nav-bg-color) !important;
+    }
+
+    #nav-footer > div > ul.link-list-moz > li:first-child::after {
+        content: 'Dark MDN by Hinell <al.neodim@gmail.com> (v1.0.1, Thursday, July 29, 2021)';
+
+    }
+    #nav-footer .page-footer-logo {
+        filter: invert(1);
+    }
+
+}
+
+@-moz-document
+    regexp("https:\/\/developer.mozilla.org/en-US/search.*"),
+    regexp(".*localhost:[56]\d{3}/en-US/search.*")
+{
+    /* SEARCH PAGE */
+    .search-results .highlight, .search-results .summary {
+        color: #ffffff;
+        display: block;
+    }
+}

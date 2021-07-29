@@ -1,0 +1,71 @@
+/* ==UserStyle==
+@name         MDN Docs - Default
+@description  Old-style MDN docs theme
+@namespace    https://github.com/hinell/userstyles/mdn.org
+@homepageURL  https://github.com/hinell
+@author       Hinell <neodim@gmail.com> (https://github.com/hinell)
+@version      1.0.0
+@license       TODO: Add THICK border around this license
+ MDN Docs - Default
+ Copyright (C) 2021- Alex A. Davronov <al.neodim@gmail.com>
+ 
+ Redistribution and (re)use of this Source or Binary code produced from such
+ regardless of the carrier with or without modification is permitted free of
+ charge (unless explicitly stated otherwise herewith) provided that
+ the following conditions are met:
+ 
+ 1. Redistributions of the Source code must retain the above
+    Copyright notice, this List of conditions, and the following
+    Disclaimer.
+ 
+ 2. Redistributions of the Binary code must reproduce the above
+    Copyright notice, this List of conditions, and the following
+    Disclaimer visible prominently and clearly to the user's eyes
+    within documentation provided with such distribution or at the
+    user request immediately.
+ 
+ 3. Failure to meet the List of condition set hereby terminates
+    unconditionally your rights and permissions granted by the above
+    Copyright notice and make you eligible for prosecution, lawsuit or any
+    legal actions or proceedings under appropritate law of country of your
+    residence or International law.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ DEALINGS IN THE SOFTWARE.
+==/UserStyle== */
+
+@-moz-document
+    regexp("https:\/\/developer.mozilla.org/en-US/docs/.*"),
+    regexp(".*localhost:5000/en-US/.*")
+{
+    body {
+        color: #3b3c40 !important;
+        font-family: 'Open Sans',Arial,sans-serif !important;
+        line-height: 1.5 !important;
+    }
+
+    .main-page-content a:active, article a:focus, article a:hover,
+    .main-page-content a,
+    .main-page-content a
+    {
+        text-decoration: none !important;
+    }
+
+    h1, h2, h3, h4 {
+        margin-bottom: 12px;
+        word-wrap: break-word;
+        font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+        font-weight: 200;
+        line-height: 1;
+        color: #4d4e53;
+    }
+
+#sidebar-quicklinks {
+    text-indent: 6px;
+}
+}
