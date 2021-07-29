@@ -1,10 +1,10 @@
 /* ==UserStyle==
-@name         MDN Docs - Dark
+@name         MDN Docs - Dark Theme
 @description  Old-style MDN docs theme
 @namespace    https://github.com/hinell/userstyles/mdn.org
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.2
+@version      2.0.0
 @license       TODO: Add THICK border around this license
  MDN Docs - Default
  Copyright (C) 2021- Alex A. Davronov <al.neodim@gmail.com>
@@ -44,13 +44,13 @@
     regexp(".*localhost:[56]\d{3}/en-US/.*")
 {
     :root {
-        --background-color  : hsl(0deg 0% 20%);
-        --nav-bg-color      : hsl(0deg 0% 25%);
+        --background-color  : hsl(0deg 0% 18%);
+
+        --nav-sidebar-link-color         : hsl(198deg 55% 63%);
+        --nav-bg-color      : hsl(0deg 0% 23%);
         --nav-dropdown-bg-color: hsl(0deg 0% 35%);
         --nav-dropdown-focus-bg-color: hsl(0deg 0% 50%);
-
-        /* Borrowed idea from https://github.com/itmeo/webgradients */
-        --background-image  : linear-gradient(to top, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 14%) 100%);
+        --nav-link-color    : hsl(198deg 55% 90%);
 
         --body-bg-dark-0    : #282828;
         --body-bg-dark-1    : #404040;
@@ -72,7 +72,7 @@
 
         --code-font-family  : "JetBrains Mono", Lato, sans-serif;
 
-        --link-color        : hsl(15, 42%, 50%);
+        --link-color        : hsl(15deg 74% 54%);
         --link-color-hover  : hsl(0, 60%, 100%);
         --link-color-visited: hsl(16, 24%, 47%);
         
@@ -82,7 +82,7 @@
         filter: invert(1);
     }   
 
-     body
+    body
     {
         background-color: var(--background-color);
         color: #dadada !important;
@@ -102,10 +102,11 @@
     }
 
     /* --------------< LINKS >--------------      */
-    a:link,
-    a:visited,
-    .main-page-content  a:link,
-    .main-page-content  a:visited
+     a
+    ,a:link
+    ,a:visited
+    ,.main-page-content a:link
+    ,.main-page-content a:visited
     {
         text-decoration: none !important;
         color: var(--link-color) !important;
@@ -143,11 +144,13 @@
     .main-page-content .index code {
         background-color: hsl(0deg 0% 22%) !important;
     }
+    .main-page-content .index a:hover code {
+        background-color: hsl(0deg 0% 0%) !important;
+    }
 
     h1, h2, h3, h4 {
         margin-bottom: 12px;
         word-wrap: break-word;
-        font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
         font-weight: 200;
         line-height: 1;
         color: #c0c0c0;
@@ -179,7 +182,23 @@
         color: #db5b45;
         cursor: not-allowed;
     }
+
+    /* BODY TOP BUTTONS */
+     a:link.button.minimal
+    ,a:visited.button.minimal
+    {
+        color: white !important;
+    }
+
     /* Formal syntax */
+
+    pre.notranslate
+    {
+        background-color: var(--body-code-bg) !important;
+        color: var(--body-code-col) !important;
+    }
+
+    
     /* Examples */
 
     /* BODY:CODE */
@@ -192,8 +211,10 @@
         background-color: transparent ;
     }
 
-    .main-page-content p code
+    /* These are small code inserted into a text. */
+     .main-page-content p code
     ,.main-page-content li code
+    ,.main-page-content li ::not(pre)
     {
         background-color: var(--body-p-code-bg) !important;
         padding-top: 0.15em;
@@ -201,7 +222,7 @@
         padding-left: 0.15em;
     }
 
-    .main-page-content .standard-table p code
+     .main-page-content .standard-table p code
     ,.main-page-content .standard-table li code
     {
         background-color: var(--body-p-code-bg-light) !important;
@@ -210,8 +231,11 @@
         padding-left: 0.15em;
     }
 
+    /* Links */
      .main-page-content code a
     ,.main-page-content code a:link
+    ,.main-page-content pre  a
+    ,.main-page-content pre  a:link
     {
         font-weight: bold;
         color: var(--body-code-link-color) !important;
@@ -225,7 +249,8 @@
 
      .main-page-content a:hover code
     ,.main-page-content a:hover pre
-    {
+    {   
+        color: white !important;
         background-color: black !important;
     }
 
@@ -237,7 +262,6 @@
         background-color: var(--body-p-code-bg) !important;
         padding: .1em;
         border-radius: 2px;
-        color: var(--link-color) !important;
     }
 
     /* Html */
@@ -256,12 +280,22 @@
         color: var(--body-code-col) !important;
     }
 
-    .ic-prefix:before {
-        color: #ffffff;
+
+     .ic-prefix:before
+    ,.ic-footnote:before
+    ,.ic-non-standard:before
+    ,.ic-deprecated:before
+    ,.ic-experimental:before
+    ,.ic-prefix:before
+    ,.ic-disabled:before
+    ,.ic-altname:before
+    {
+        color: #ffffff !important;
     }
     /* --------------< HEADER >-------------- */
      header.page-header {
         padding: 0;
+        padding-top: .5em;
      }
      .page-header
      ,.breadcrumb-locale-container
@@ -275,6 +309,7 @@
         z-index: 3;
     }
     /* HEADER:ICONS */
+    /* BREADCRUMBS */
      .breadcrumbs-container li .breadcrumb-penultimate:after
     ,.breadcrumbs-container li .breadcrumb:after
     ,ul.main-menu .top-level-entry:before
@@ -286,18 +321,45 @@
     .breadcrumbs-container li a:visited
      {
         margin-right: .5em;;
-        color: hsl(198deg 55% 63%) !important;
+        color: var(--nav-sidebar-link-color) !important;
         font-weight: bold;
      }
     
-    /* CURRENT PAGE */
+    /* BREADCRUMBS: CURRENT PAGE */
     .breadcrumbs-container li a.breadcrumb-current-page:link,
     .breadcrumbs-container li a.breadcrumb-current-page:visited
      {
-        color: hsl(198deg 55% 90%) !important;
+        color: var(--nav-link-color) !important;
      }
 
+    /* --------------< SIDEBAR >-------------- */
 
+    /* Table of Contents */
+
+    .sidebar .icon-deprecated
+    ,.icon.icon-deprecated {
+        color: rgb(190, 68, 38) !important;
+    }    
+    .sidebar .icon-nonstandard
+    ,.icon.icon-nonstandard {
+        color: rgb(38, 160, 190) !important;
+    }    
+
+    .sidebar .icon-experimental
+    ,.icon.icon-experimental {
+        color: rgb(38, 160, 190) !important;
+    }    
+    
+    
+     .sidebar li a
+    ,.sidebar li a:link
+    ,.sidebar li a:visited
+    {
+        color: var(--nav-sidebar-link-color) !important;
+    }
+
+
+    /* --------------< MISCELANEIOUS >-------------- */
     .notecard {
         color: black !important;
     }
@@ -306,11 +368,14 @@
         background-color: #637490;
     }
 
-    .notecard a:visited {
+     .notecard p a:link
+    ,.notecard p a:visited
+    {
         color: black !important;
     }
     
-    .notecard p code {
+     .notecard p a code
+    {
         background-color: var(--body-p-code-bg-light) !important;
     }
     /* Technologies, Referecnes & Guides etc. */
@@ -331,11 +396,19 @@
     /* Selected item on the search dropdown */
      #downshift-0-menu .header-search .search-results .result-item.highlight
     ,.header-search .search-results .result-item:hover
+    ,.header-search .search-results .result-item.highlight
     {
             background-color: var(--nav-dropdown-focus-bg-color);
     }
 
 
+     ul.main-menu li ul a:link
+    ,ul.main-menu li ul a:visited
+    {
+        font-weight: bold;;
+        color: var(--nav-link-color) !important;
+    }
+    
      ul.main-menu li ul a:focus
     ,ul.main-menu li ul a:hover {
         background-color: var(--nav-dropdown-focus-bg-color);
@@ -344,23 +417,6 @@
         outline: none;
     }
 
-    /* --------------< BODY:LEFT >-------------- */
-    /* Table of Contents */
-
-    .sidebar .icon-deprecated
-    ,.icon.icon-deprecated {
-        color: rgb(190, 68, 38) !important;
-    }    
-    .sidebar .icon-nonstandard
-    ,.icon.icon-nonstandard {
-        color: rgb(38, 160, 190) !important;
-    }    
-
-    .sidebar .icon-experimental
-    ,.icon.icon-experimental {
-        color: rgb(38, 160, 190) !important;
-    }    
-    
     /* --------------< BODY:RIGHT >-------------- */
 
     /* BODY:ICONS */

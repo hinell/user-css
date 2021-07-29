@@ -1,10 +1,10 @@
 /* ==UserStyle==
-@name         MDN Docs - Default
+@name         MDN Docs - Open Sans
 @description  Old-style MDN docs theme
 @namespace    https://github.com/hinell/userstyles/mdn.org
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.0
+@version      2.0.0
 @license       TODO: Add THICK border around this license
  MDN Docs - Default
  Copyright (C) 2021- Alex A. Davronov <al.neodim@gmail.com>
@@ -40,8 +40,8 @@
 ==/UserStyle== */
 
 @-moz-document
-    regexp("https:\/\/developer.mozilla.org/en-US/docs/.*"),
-    regexp(".*localhost:5000/en-US/.*")
+    regexp("https:\/\/developer.mozilla.org/en-US/.*"),
+    regexp(".*localhost:[56]\d{3}/en-US/.*")
 {
     body {
         color: #3b3c40 !important;
@@ -59,7 +59,7 @@
     h1, h2, h3, h4 {
         margin-bottom: 12px;
         word-wrap: break-word;
-        font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+        font-family: 'Open Sans Light',Helvetica,Arial,sans-serif !important;
         font-weight: 200;
         line-height: 1;
         color: #4d4e53;
