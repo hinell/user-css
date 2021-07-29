@@ -8,7 +8,9 @@
 @license      MIT
 ==/UserStyle== */
 
-@-moz-document regexp(".*\\/share\\/doc\\/git-doc\\/.*")
+@-moz-document
+    regexp(".*\\/share\\/doc\\/git-doc\\/.*"),
+    regexp(".*\\/share/doc\\/git\\/.*")
 {
     :root {
         --background-color  : hsl(0, 0%, 12%);
@@ -17,7 +19,7 @@
         --darker-bkgd-color : #282828;
         --lighter-bkgd-color: #404040;
         --table-bkgd-color  : #474747;
-        --border-color      : #666;
+        --border-color      : rgb(0, 0, 0);
         --box-color         : #777;
      
         --text-color        : #d1d1d1;
@@ -38,14 +40,16 @@
 
     body {
         background-image: var(--background-image) !important;
-        color           : var(--text-color) !important;
+        color           : var(--text-color) !important      ;
+        max-width       : 70%                               ;
+        margin          : 0 auto                            ;
     }
     
     .verseblock pre,
     .admonitionblock > table td.content,
     #header > h1:first-child,
     .admonitionblock > table td.icon .title {
-        color: hsla(0, 0%, 100%, 0.85) !important;
+        color: hsla(0, 0%, 13%, 0.85) !important;
     }
     
     a {
@@ -56,21 +60,44 @@
         color: white;
     }
     
-    code,
-    .literalblock pre,
-    .listingblock pre:not(.highlight),
-    .listingblock pre[class="highlight"],
-    .listingblock pre[class^="highlight "],
-    .listingblock pre.CodeRay,
-    .listingblock pre.prettyprint {
-        font-family: "JetBrains Mono", consolas, sans-serif !important;;
-        background: hsl(0, 0%, 30%) !important;
-        color: hsl(0, 0%, 100%) !important;
-        box-shadow: inset 0 0 2px 1px black !important;
+    #content p code,
+    #content .literalblock pre,
+    #content .listingblock pre:not(.highlight),
+    #content .listingblock pre[class="highlight"],
+    #content .listingblock pre[class^="highlight "],
+    #content .listingblock pre.CodeRay,
+    #content .listingblock pre.prettyprint,
+    #content pre.content
+    {
+        font-family  : "JetBrains Mono", consolas, sans-serif !important;
+        background   : hsl(0, 0%, 30%) ;
+        color        : hsl(0, 0%, 100%);
+        /* box-shadow: inset 0 0 2px 1px black !important; */
+
+    }
+    #content .literalblock pre,
+    #content .listingblock pre:not(.highlight),
+    #content .listingblock pre[class="highlight"],
+    #content .listingblock pre[class^="highlight "],
+    #content .listingblock pre.CodeRay,
+    #content .listingblock pre.prettyprint,
+    #content pre.content 
+    {
+        border       : none;
+        border-radius: 0;
+        border-left  : solid 4px hsl(101, 29%, 48%) !important;
     }
 
-    code {
-        font-weight: bold;
+    #content pre.content {
+        color: white !important;
+    }
+
+
+
+    #content p code {
+        border: solid 1px var(--border-color) !important;
+        color: coral !important;
+        background-color: transparent !important;
     }
     
     dt span.term {
@@ -78,14 +105,14 @@
         color: hsl(0, 100%, 65%);
     }
     
-    .literal {
-        color: hsl(0, 100%, 65%) !important;
-    }
-    
+
     tt.literal,
     code.literal {
         color: hsl(50, 100%, 45%) !important;
         font-family: sans-serif !important;
     }
     
+    #content pre.content {
+
+    }
 }

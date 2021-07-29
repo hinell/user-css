@@ -9,8 +9,8 @@
 ==/UserStyle== */
 
 @-moz-document
-        regexp("^https:\/\/zsh.sourceforge.io\/Doc\/Release\/.*\.html(#.*)?"),
-        regexp("^file:.*\/[Dd]evdocs\/zsh\/(zsh_)?html\/.*\.html(#.*)?")
+        regexp("^https:\/\/zsh.sourceforge.io\/.*"),
+        regexp("^file:.*\/[Dd]evdocs\/zsh/.*")
 {
     :root {
         --background-color  : hsl(0, 0%, 12%);
@@ -30,6 +30,10 @@
         --link-color        : hsl(15, 55%, 45%);
         --link-color-new    : hsl(15, 100%, 45%);
         --link-color-visited: hsl(15, 60%, 45%);
+
+        --link-color-header-1 : hsl(15, 15%, 35%);
+        --link-color-header-2 : hsl(15, 20%, 40%);
+        --link-color-header-3 : hsl(15, 25%, 45%);
 
         --code-font-size        : 13px;
         --code-font-family      : "JetBrains Mono", Lato, sans-serif;
@@ -69,18 +73,18 @@
     
     div.example {
         border-radius: 0px;
-        background: hsl(101, 29%, 48%) !important;
+        background: transparent !important;
         border: none !important;
-        padding: 0;
-        padding-left: 0.4em;
-        box-shadow: inset 0px 0px 2px 1px hsl(0, 0%, 10%);
-    
+        padding: 0;    
     }
     
-    div.example > pre.example {
+    div.example > pre.example, pre {
+        font: 1em/1 consolas, monospace !important;
+        border-left: solid 4px hsl(101, 29%, 48%) !important;
         border-radius: 0;
         background: hsl(0, 0%, 15%) !important;
-        color: white;
+        box-shadow: inset 0px 0px 2px 1px hsl(0, 0%, 10%);
+        color: hsl(0, 0%, 75%);
         padding: .8em 1.2em .4em;
         box-shadow: 0px 0px 2px 1px hsl(0, 0%, 10%);
     } 
@@ -106,6 +110,10 @@
         color: var(--text-color) !important;
     }
     
+    h1 > a[href] { color: var(--link-color-header-1) !important; }
+    h2 > a[href] { color: var(--link-color-header-2) !important; }
+    h3 > a[href] { color: var(--link-color-header-3) !important; }
+
      .node   a[href]
     ,.header a[href]
     {
@@ -113,7 +121,11 @@
         background-color: transparent !important;
     }
 
-    var, samp, p > tt {
+    var, samp
+    , p > tt
+    , p > code
+    , ul > li > code
+    , body > code {
         display: inline-block;
         color: Coral;
         color: sandybrown;
