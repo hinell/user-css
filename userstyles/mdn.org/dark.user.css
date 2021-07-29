@@ -271,19 +271,50 @@
     /* Html */
     /* CSS */
     /* JS */
-    /* Specifications */
-    /* Browser compatibility */
-    .standard-table,
-    iframe,
-    .main-page-content .code-example code,
-    .main-page-content .code-example pre,
-    table.properties,
-    .bc-table.bc-table-web
+     .standard-table
+    , iframe
+    ,.main-page-content .code-example code
+    ,.main-page-content .code-example pre
     {
-        background-color: var(--body-code-bg) !important;
+        /* background-color: var(--body-code-bg) !important; */
+        background: transparent;
         color: var(--body-code-col) !important;
     }
-
+    
+    
+    /* Browser compatibility */
+     table.bc-table.bc-table-web
+    ,table.bc-table.bc-table-web thead tr > td:first-child
+    ,table.bc-table.bc-table-web tr:nth-child(1n)
+    ,table.bc-table.bc-table-web tr:nth-child(2n)
+    {
+        background: transparent !important;
+        /* color: var(--body-code-col) !important; */
+    }
+    
+    table.bc-table.bc-table-web .bc-supports-yes
+    {
+        background-color: rgb(95, 133, 60);
+    }
+    
+    table.bc-table.bc-table-web .bc-supports-no
+    {
+        background-color: rgb(133 60 60);
+    }
+    table.bc-table.bc-table-web .bc-supports-unknown
+    {
+        background-color: grey;
+    }
+    
+    
+    /* Specifications */
+      table.properties  
+    , table.properties td
+    , table.properties th
+    {
+        background: transparent;
+        border: 2px solid black;;
+    }
 
      .ic-prefix:before
     ,.ic-footnote:before
