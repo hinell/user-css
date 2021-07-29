@@ -56,20 +56,11 @@ It's any [css] file that is specifically named (suffixed) by `.user.css` extensi
 
 ## Contribute
 [contribute]: #contribute
-See [DEVELOPMENT.md] file for more info. A good starting point with contribution is to checkout root [`package.json`](./package.json) file scripts first. The projet is maintananed by following tools:
-* `commitizen` - Handy tool to quickly build up git commit message
-* `lerna` - Manages monorepo projects
-
-| command | description
-|-|-|
-|`$ npm run cz`| commit changes by using `git-cz` |
-|`$ npx lerna create <pkg name>`| create new userstyle |
-
-
+See [DEVELOPMENT.md] file for more info.
 ## Changelog
 [changelog]: #changelog
 
-TODO Generate
+<!-- TODO: Generate -->
 
 [↑ Go To Top][top]
 
