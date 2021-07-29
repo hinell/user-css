@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/gnu-docs-man
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.0
+@version      1.0.2
 @license      MIT
 ==/UserStyle== */
 
@@ -110,6 +110,19 @@
         color: var(--text-color) !important;
     }
     
+    h2, h3, h4
+    {
+        position: sticky;
+        background-color: var(--background-color);
+        top: 0px;
+        max-height: 32px;
+        overflow: clip;
+    }
+
+    h2 { z-index: 2; }
+    h3 { z-index: 3; }
+    h4 { z-index: 4; }
+
     h1 > a[href] { color: var(--link-color-header-1) !important; }
     h2 > a[href] { color: var(--link-color-header-2) !important; }
     h3 > a[href] { color: var(--link-color-header-3) !important; }
@@ -125,7 +138,8 @@
     , p > tt
     , p > code
     , ul > li > code
-    , body > code {
+    , body > code
+    , em {
         display: inline-block;
         color: Coral;
         color: sandybrown;
@@ -138,5 +152,10 @@
 
     dt code, dt > tt {
         color: skyblue !important;
+    }
+
+    table.header + p::after {
+        font-size: 12px;
+        content: 'MDN Dark by Hinell <al.neodim@gmail.com> (v1.0.1, Fri, July 30, 2021)';
     }
 }
