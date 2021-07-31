@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/gnu-docs-man
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.2
+@version      1.0.3
 @license      MIT
 ==/UserStyle== */
 
@@ -110,14 +110,16 @@
         color: var(--text-color) !important;
     }
     
-    h2, h3, h4
+    h2, h3
     {
         position: sticky;
         background-color: var(--background-color);
-        top: 0px;
         max-height: 32px;
         overflow: clip;
     }
+    
+    h2 { top: 0px; }
+    h3 { top: 32px; }
 
     h2 { z-index: 2; }
     h3 { z-index: 3; }
