@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/mdn.org
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      2.0.0
+@version      2.0.1
 @license       TODO: Add THICK border around this license
  MDN Docs - Default
  Copyright (C) 2021- Alex A. Davronov <al.neodim@gmail.com>
@@ -55,12 +55,12 @@
         --body-bg-dark-0    : #282828;
         --body-bg-dark-1    : #404040;
         
-        --body-p-code-bg    : #404040;
-        --body-p-code-bg-light: #b1b1b1;
-        --body-code-bg      : #ffffff;
-        --body-code-link-hover : #ffffff;
-        --body-code-col     : rgb(26, 26, 26);
-        --body-code-link-color: hsl(15, 35%, 35%);
+        --body-p-code-bg        : #404040;
+        --body-p-code-bg-light  : #b1b1b1;
+        --body-code-bg          : #bebebe;
+        --body-code-link-hover  : #ffffff;
+        --body-code-col         : rgb(26, 26, 26);
+        --body-code-link-color  : hsl(15, 35%, 35%);
 
         --table-bkgd-color  : #474747;
         --border-color      : #666;
@@ -138,14 +138,7 @@
     .main-page-content h2 a:visited,
     .main-page-content h3 a:visited
     {
-        color: var(--link-color-visited) !important;
-    }
-
-    .main-page-content .index code {
-        background-color: hsl(0deg 0% 22%) !important;
-    }
-    .main-page-content .index a:hover code {
-        background-color: hsl(0deg 0% 0%) !important;
+        color: white !important;
     }
 
     h1, h2, h3, h4, h5, h6
@@ -164,7 +157,29 @@
         z-index: 2;
     }
 
+    .main-page-content .index code {
+        background-color: hsl(0deg 0% 22%) !important;
+    }
+    .main-page-content .index a:hover code {
+        background-color: hsl(0deg 0% 0%) !important;
+    }
+
+    /* Syntax.parameters.badges */
+    .main-page-content .badge.inline {
+        color: #3b3c40 !important;
+    }
     /* Formal defintion */
+    /* Specification */
+     .main-page-content .standard-table thead th
+    {
+        background-color: var(--body-code-bg) !important;
+    }
+    
+     .main-page-content .standard-table tbody td
+    {
+        background-color: rgb(209, 209, 209) !important;
+    }
+
      .main-page-content .standard-table a 
     ,.main-page-content .standard-table a:link
     {
@@ -212,13 +227,12 @@
     ,.page-header-main
     ,ul.main-menu
     {
-        background-color: transparent ;
+        background-color: transparent;
     }
 
     /* These are small code inserted into a text. */
      .main-page-content p code
     ,.main-page-content li code
-    ,.main-page-content li ::not(pre)
     {
         background-color: var(--body-p-code-bg) !important;
         padding-top: 0.15em;
@@ -323,9 +337,9 @@
     ,.ic-experimental:before
     ,.ic-prefix:before
     ,.ic-disabled:before
-    ,.ic-altname:before
+        ,.ic-altname:before
     {
-        color: #ffffff !important;
+        color: white !important;
     }
     /* --------------< HEADER >-------------- */
      header.page-header {
@@ -401,8 +415,8 @@
         color: black !important;
     }
 
-    .notecard .note {
-        background-color: #637490;
+    .notecard.note {
+        background-color: #647da7;
     }
 
      .notecard p a
@@ -413,6 +427,9 @@
     }
     
      .notecard p a code
+    ,.notecard p a pre
+    ,.main-page-content .notecard p code
+    ,.main-page-content .notecard p pre
     {
         background-color: var(--body-p-code-bg-light) !important;
     }
