@@ -55,15 +55,18 @@
         --nav-dropdown-focus-bg-color   : hsl(0deg 0% 50%);
         --nav-link-color                : hsl(198deg 55% 90%);
 
+        /* BODY SPECIFIC COLORS */
         --body-bg-dark-0    : #282828;
         --body-bg-dark-1    : #404040;
         
         --body-p-code-bg        : #404040;
         --body-p-code-bg-light  : #b1b1b1;
-        --body-code-bg          : #bebebe;
+        --body-code-bg          : #f1f1f1;
         --body-code-link-hover  : #ffffff;
         --body-code-col         : rgb(26, 26, 26);
-        --body-code-link-color  : hsl(15, 35%, 35%);
+        --body-code-link-color  : hsl(15, 32%, 44%);
+        
+        --body-code-left-indent-bg: hsl(189, 100%, 35%);
 
         --table-bkgd-color  : #474747;
         --border-color      : #666;
@@ -75,7 +78,7 @@
 
         --code-font-family  : "JetBrains Mono", Lato, sans-serif;
 
-        --link-color        : hsl(15deg 74% 54%);
+        --link-color        : hsl(15deg 55% 55%);
         --link-color-hover  : hsl(0, 60%, 100%);
         --link-color-visited: hsl(16, 24%, 47%);
         
@@ -233,6 +236,11 @@
         background-color: transparent;
     }
 
+    .CodeMirror
+    ,pre {
+        border-left: 6px solid var(--body-code-left-indent-bg) !important;
+    }
+
     /* These are small code inserted into a text. */
      .main-page-content p code
     ,.main-page-content li code
@@ -297,8 +305,15 @@
         background: transparent;
         color: var(--body-code-col) !important;
     }
-    
-    
+    /* Example BAD emoji */
+    .main-page-content .example-bad:after {
+        background-color: #e4595f;
+    }
+
+
+    kbd {
+        color: var(--table-bkgd-color);
+    }
     /* Escape sequence (String page) */
     #escape_sequences+div table {
         color: var(--table-bkgd-color);
@@ -424,7 +439,7 @@
     }
 
     .notecard.note {
-        background-color: #647da7;
+        background-color: #b9c8e3;
     }
 
      .notecard p a
