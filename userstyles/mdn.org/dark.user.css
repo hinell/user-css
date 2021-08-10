@@ -4,7 +4,9 @@
 @namespace    https://github.com/hinell/userstyles/mdn.org
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      2.0.1
+@version      2.0.2
+@var color background-color   `Page background color`   hsl(0deg 0% 18%)
+
 @license       TODO: Add THICK border around this license
  MDN Docs - Default
  Copyright (C) 2021- Alex A. Davronov <al.neodim@gmail.com>
@@ -44,13 +46,14 @@
     regexp(".*localhost:[56]\d{3}/en-US/.*")
 {
     :root {
-        --background-color  : hsl(0deg 0% 18%);
 
-        --nav-sidebar-link-color         : hsl(198deg 55% 63%);
-        --nav-bg-color      : hsl(0deg 0% 23%);
-        --nav-dropdown-bg-color: hsl(0deg 0% 35%);
-        --nav-dropdown-focus-bg-color: hsl(0deg 0% 50%);
-        --nav-link-color    : hsl(198deg 55% 90%);
+
+        /* HEADER COLORS */
+        --nav-sidebar-link-color        : hsl(198deg 55% 63%);
+        --nav-bg-color                  : hsl(0deg 0% 23%);
+        --nav-dropdown-bg-color         : hsl(0deg 0% 35%);
+        --nav-dropdown-focus-bg-color   : hsl(0deg 0% 50%);
+        --nav-link-color                : hsl(198deg 55% 90%);
 
         --body-bg-dark-0    : #282828;
         --body-bg-dark-1    : #404040;
@@ -296,6 +299,11 @@
     }
     
     
+    /* Escape sequence (String page) */
+    #escape_sequences+div table {
+        color: var(--table-bkgd-color);
+    }
+    
     /* Browser compatibility */
      table.bc-table.bc-table-web
     ,table.bc-table.bc-table-web thead tr > td:first-child
@@ -505,7 +513,7 @@
     }
 
     #nav-footer > div > ul.link-list-moz > li:first-child::after {
-        content: 'Dark MDN by Hinell <al.neodim@gmail.com> (v1.0.1, Thursday, July 29, 2021)';
+        content: 'Dark MDN by Hinell <al.neodim@gmail.com> (v2.0.2,  Tue, August 10, 2021)';
 
     }
     #nav-footer .page-footer-logo {
