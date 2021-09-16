@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/mdn.org
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      2.0.2
+@version      2.0.3
 @var color background-color   `Page background color`   hsl(0deg 0% 18%)
 
 @license       TODO: Add THICK border around this license
@@ -350,7 +350,7 @@
     , table.properties th
     {
         background: transparent;
-        border: 2px solid black;;
+        border: 2px solid rgb(146, 146, 146);;
     }
 
      .ic-prefix:before
