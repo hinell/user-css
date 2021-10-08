@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/git-docs-local
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.1
+@version      1.0.2
 @license      MIT
 ==/UserStyle== */
 
@@ -43,17 +43,25 @@
         color           : var(--text-color) !important      ;
         max-width       : 70%                               ;
         margin          : 0 auto                            ;
+        font-size       : 16px !important                   ;
     }
     
     .verseblock pre,
     .admonitionblock > table td.content,
     #header > h1:first-child,
     .admonitionblock > table td.icon .title {
-        color: hsla(0, 0%, 13%, 0.85) !important;
+        color: hsla(0, 0%, 55%, 0.85) !important;
     }
     
     a {
         color: hsl(100, 30%, 45%);
+    }
+
+    /*---------------------------------------------------------------------Tip*/
+     .admonitionblock.tip table tbody tr
+    ,.admonitionblock.tip table tbody > tr:nth-of-type(odd)
+    {
+        background-color: #ddca48 !important;
     }
     
     a:hover {
@@ -92,11 +100,23 @@
         color: white !important;
     }
 
+    /*--------------------------------------------------------------------Code*/
+     #content p code
+    {
+        border          : solid       1px var(--border-color) !important;
+        color           : coral                               !important;
+        background-color: transparent                         !important;
+    }
 
-
-    #content p code {
-        border: solid 1px var(--border-color) !important;
+    #content pre.content em
+    {
         color: coral !important;
+    }
+
+    /*-----------------------------------------------------------------Options*/
+     #content .dlist > dl > dt.hdlist1
+    {
+        color: #f9b110 !important;
         background-color: transparent !important;
     }
     
@@ -111,8 +131,4 @@
         color: hsl(50, 100%, 45%) !important;
         font-family: sans-serif !important;
     }
-    
-    #content pre.content {
-
     }
-}

@@ -10,7 +10,8 @@
 
 @-moz-document
         regexp("^https:\\/\\/www.gnu.org\\/software\\/\\w+\\/manual\\/.*"),
-        regexp("^file:.*\/[Dd]evdocs\/bash\/.*\.html(#.*)?")
+        regexp("^file:.*\/[Dd]evdocs\/bash\/.*\.html(#.*)?"),
+        regexp("^file:.*\/[Dd]evdocs\/make\/.*\.html(#.*)?")
 {
     :root {
         --background-color  : hsl(0, 0%, 12%);
