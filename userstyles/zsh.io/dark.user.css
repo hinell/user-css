@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/gnu-docs-man
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.3
+@version      1.0.4
 @license      MIT
 ==/UserStyle== */
 
@@ -51,7 +51,7 @@
     }
     
     body {
-        max-width: 50%;
+        max-width: 45em;;
         margin: 0 auto;
     }
     
