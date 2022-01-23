@@ -16,6 +16,11 @@ The repo contains `.css` files I have created in order to improve experience of 
 
 ## INSTALL
 [install]: #install
+> The project is mirrored at: [github][github mirror], [gitlab][gitlab mirror], and [bitbucket][bitbucket mirror] mirrors.
+
+[github mirror]: https://github.com/hinell/user-css
+[gitlab mirror]: https://gitlab.com/hinell/user-css
+[bitbucket mirror]: https://bitbucket.org/hinell/user-css
 
 To be able to use userstyles in your browser you have to install plugin that injects stylesheet files like [`Stylus`][stylus], `Stylish` etc. They have to support specific [user-css][styles-user-css] format (header & styles).
 
