@@ -241,9 +241,12 @@
         border-left: 6px solid var(--body-code-left-indent-bg) !important;
     }
 
-    /* These are small code inserted into a text. */
-     .main-page-content p code
-    ,.main-page-content li code
+    /*
+        These are small code examples inserted into a text.
+        Div:not() On regexp page disables this styling for code examples
+    */
+     .main-page-content p div:not(.code-example) code
+    ,.main-page-content li div:not(.code-example) code
     {
         background-color: var(--body-p-code-bg) !important;
         padding-top: 0.15em;
