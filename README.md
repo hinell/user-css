@@ -1,10 +1,7 @@
 # UserStyles Collection 
 [top]: #userstyles-collection
 
-  [Install](#install)
-• [Styles](#styles)
-• [FAQ](#faq)
-• [Contribute](#contribute)
+## [Install](#install) • [Styles](#styles) • [FAQ](#faq) • [Contribute](#contribute)
 
 
 • • • 
