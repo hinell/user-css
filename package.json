@@ -3,6 +3,7 @@
   "private": true,
   "description": "Collections of userstyles",
   "main": "",
+  "repository": "https://github.com/hinell/user-css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ver:bump": "lerna version --no-git-tag-version",
@@ -10,13 +11,14 @@
     "ver": "lerna version",
     "log": "conventional-changelog -p angular -si CHANGELOG.md",
     "cz": "git-cz",
-    "bootstrap": "lerna bootstrap --hoist"
+    "bootstrap": "lerna bootstrap --hoist",
+    "repo browse": "google-chrome https://{github.com,gitlab.com,bitbucket.org}/hinell/user-css"
   },
   "keywords": [
     "userstyle"
   ],
   "author": "Alexander Davronov hinell@github.com <al.neodimg@gmail.com>",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
     "commitizen": "^4.2.2",
     "conventional-changelog-cli": "^2.1.1",
