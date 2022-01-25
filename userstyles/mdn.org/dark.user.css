@@ -82,6 +82,8 @@
         --link-color-hover  : hsl(0, 60%, 100%);
         --link-color-visited: hsl(16, 24%, 47%);
         
+
+        --notes-warning-bg  : #ebde42;
     }
 
     .logo {
@@ -461,6 +463,19 @@
     }
     /* Technologies, Referecnes & Guides etc. */
     /* Search field (on the right) */
+    
+    
+    /*---------------------------------------------------------------Notecards*/
+    /* WARNING Notecard
+    --------------------------------*/
+    #content.main-content article .notecard.draft,
+    #content.main-content article .notecard.experimental,
+    #content.main-content article .notecard.secure,
+    #content.main-content article .notecard.warning {
+        background-color: var(--notes-warning-bg);
+}
+
+    
     #downshift-0-menu .search-results
     ,ul.main-menu li ul
     {
@@ -538,6 +553,13 @@
         filter: invert(1);
     }
 
+    /*-----------------------------------------------Recently viewed documents*/
+    #content
+    #writers-homepage 
+    article#recently-viewed-documents
+    table > * > tr > *{
+        background-color: transparent;;
+    }
 }
 
 @-moz-document
