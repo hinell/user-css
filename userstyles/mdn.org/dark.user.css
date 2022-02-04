@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/mdn.org
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      2.0.3
+@version      2.0.4
 @var color background-color   `Page background color`   hsl(0deg 0% 18%)
 
 @license       TODO: Add THICK border around this license
@@ -324,6 +324,11 @@
         color: var(--table-bkgd-color);
     }
     
+    /* Default table */
+    #content.main-content article.main-page-content div table > * > tr > * {
+       background-color: transparent;;
+    }
+
     /* Browser compatibility */
      table.bc-table.bc-table-web
     ,table.bc-table.bc-table-web thead tr > td:first-child
@@ -345,10 +350,17 @@
     }
     table.bc-table.bc-table-web .bc-supports-unknown
     {
-        background-color: grey;
+--                          }
+    
+    /* Icons */
+    /* TODO: Fix table colors */
+      table.bc-table  tr.bc-platforms .bc-platforms .bc-platform-desktop:before
+    , table.bc-table  tr.bc-platforms .bc-platforms .bc-platform-mobile:before
+    , table.bc-table  tr.bc-platforms .bc-platforms .bc-platform-server:before
+    , table.bc-table  tr.bc-browsers  .th[class*="bc-browser"] > span:before
+     {
+        filter: invert();
     }
-    
-    
     /* Specifications */
       table.properties  
     , table.properties td

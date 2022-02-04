@@ -4,7 +4,7 @@
 @namespace    https://github.com/hinell/userstyles/git-docs-local
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.2
+@version      1.0.3
 @license      MIT
 ==/UserStyle== */
 
@@ -41,7 +41,7 @@
     body {
         background-image: var(--background-image) !important;
         color           : var(--text-color) !important      ;
-        max-width       : 70%                               ;
+        max-width       : 21cm                              ;
         margin          : 0 auto                            ;
         font-size       : 16px !important                   ;
     }
