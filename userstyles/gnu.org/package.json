@@ -1,6 +1,6 @@
 {
   "name": "@hinell-user-css/gnu-org",
-  "version": "1.0.",
+  "version": "1.0.8",
   "private": true,
   "description": "GNU Man pages Dark Mode",
   "keywords": [
@@ -20,3 +20,4 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   }
+}

@@ -40,9 +40,12 @@ The following stylesheets are listed under [`./userstyles/`](./userstyles/):
 * [en.cppreference.com](http://en.cppreference.com)
 <br/>Styles for network/filesystem available cpp reference documetation. Documentation can typically be accessed via either [en.cppreference.com](en.cppreference.com) or locally: via downloading & installing local HTML book from [archives][en-cppreference-archive] . <git command>` command.
 
+* [gnu.org](userstyles/gcc.gnu.org/gcc.gnu.org.user.css/README.md)</br>
+Styles for GNU manuals (`bash`, `make`, `gawk`) in `/manuals` namespace. As of 2022 should work well for many pages. You can download and unzip manuals into `devdocs/gnu/(bash|make|gawk)/..` folder and read offline with dark styles applied. See `@-moz-document` in [user.css](userstyles/gnu.org/dark.user.css) for exact regexp used.
 
-* [Your Style.css](./userstyles/new/README.md)
-<br/>You may [contribute][contribute] your own styles to this repo by opening up a PR! 
+* [gcc.gnu.org](userstyles/gcc.gnu.org/gcc.gnu.org.user.css/README.md)</br>
+<!-- TODO: Update this -->
+Styles for for GCC STD C++  Library api.
 
 ## FAQ
 [faq]: #faq

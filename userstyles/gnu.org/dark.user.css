@@ -4,14 +4,13 @@
 @namespace    https://github.com/hinell/userstyles/gnu-docs-man
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.6
+@version      1.0.8
 @license      MIT
 ==/UserStyle== */
 
 @-moz-document
         regexp("^https:\\/\\/www.gnu.org\\/software\\/\\w+\\/manual\\/.*"),
-        regexp("^file:.*\/[Dd]evdocs\/bash\/.*\.html(#.*)?"),
-        regexp("^file:.*\/[Dd]evdocs\/make\/.*\.html(#.*)?")
+        regexp("^file:.*\/[Dd]evdocs\/(gnu\/)?(bash|make|gawk\.html_node)\/.*\.html(#.*)?")
 {
     :root {
         --background-color  : hsl(0, 0%, 12%);
@@ -122,7 +121,9 @@
         background-color: transparent !important;
     }
 
-    var, samp {
+    var,
+    samp, 
+    p code {
         display: inline-block;
         color: Coral;
         color: sandybrown;

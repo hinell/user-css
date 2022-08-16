@@ -1,0 +1,339 @@
+/* ==UserStyle==
+@name         Dark gcc.gnu.org
+@namespace    https://github.com/hinell/user-css
+@homepageURL  https://github.com/hinell/user-css
+@supportURL   https://github.com/hinell/user-css/issues
+@updateURL    https://github.com/hinell/user-css/userstyles/gcc.gnu.org/gcc.gnu.org.user.css
+@version      1.0.0
+@license      FOSSIL
+@description  Userstyles for GNU libstd++ website https://gcc.gnu.org/onlinedocs/libstdc++/api.html and offline docs
+@author       Hinell <neodim@gmail.com> (https://github.com/hinell)
+@var select color-scheme "Color scheme" {
+    "Dark":"dark",
+    "Light":"light"
+}
+@var color nav-pane-link-color "Left Navpane: link colors" "hsl(42deg 51% 56%))"
+@var color contents-template-color "Content: template colors" "hsl(230deg 100% 81%)" 
+@var text  text-font-size "Font size" "16px"
+@var text code-font-size "Content code: font size" 13px;
+@var text code-font-size "Content font: font size" "JetBrains Mono", Lato, sans-serif;
+
+==/UserStyle== */
+
+@-moz-document
+        regexp("^https:\/\/gcc.gnu.org\/onlinedocs\/libstdc\+\+\/.*\.html(#.*)?"),
+        regexp("^file:.*gcc.*-base\/libstdc\+\+\/.*\.html(#.*)?")
+{
+   :root {
+        color-scheme        : var(--color-scheme);
+        --background-color  : hsl(0, 0%, 12%);
+        /* Borrowed idea from https://github.com/itmeo/webgradients */
+        --background-image  : linear-gradient(to top, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 14%) 100%);
+        --darker-bkgd-color : #282828;
+        --lighter-bkgd-color: #404040;
+        --table-bkgd-color  : #474747;
+        --border-color      : #666;
+        --box-color         : #777;
+
+        --text-color        : #d1d1d1;
+        --text-font-family  : system-ui, -apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;
+
+        --link-color-hover  : hsl(0, 60%, 100%);
+        --link-color        : hsl(15, 55%, 45%);
+        --link-color-new    : hsl(15, 100%, 45%);
+        --link-color-visited: hsl(15, 60%, 45%);
+
+        --code-keyword1-color   : hsl(41, 100%, 75%);
+        --code-keyword2-color   : hsl(30, 50%, 45%);
+        --code-keyword4-color   : hsl(166, 35%, 70%);
+        --code-punctuation-color: hsla(22, 91%, 48%);
+        
+        --scrollbar-bg          : transparent;
+        --scrollbar-color       : hsl(0, 0%, 30%);
+    }
+
+    * {
+        background-color: unset !important;
+        background-image: none !important;
+        background-repeat: unset;
+        border: unset !important;
+
+    }
+
+    /* Reset bg image */
+    html, body
+    , #nav-tree
+    , #nav-tree-contents
+    {
+        background-image: none !important;
+
+    }
+
+
+    html, body {
+        background-color: var(--background-color) !important; 
+        color: var(--text-color) !important;
+        font-family: var(--text-font-family) !important;
+        border: none !important;
+    }
+
+    body {
+        scrollbar-color: var(--scrollbar-bg) var(--scrollbar-color);
+    }
+
+    /*-----------------------------------------------------------------General*/
+    
+    body, table, div, p, dl
+    {
+        font: 400 var(--text-font-size)/22px system-ui,Roboto,sans-serif;
+    }
+    
+    .arrow {
+        color: #c1b089;
+        cursor: pointer;
+    }
+    
+    /* Links
+    --------------------------------*/
+    
+    a[href]
+    {
+        color: var(--link-color);
+    }
+    
+    a[href]:visited
+    {
+        color: var(--link-color-visited);
+    }
+    
+    a[href]:hover
+    {
+        color: var(--link-color-hover);
+    }
+    
+    p, h1, h2, h3, h4, h5, h6, dt
+    {
+        color: var(--text-color) !important;
+    }
+    /* Images */
+    img
+    ,#nav-sync img
+    ,#nav-sync img
+    {
+        filter: invert(1) hue-rotate(180deg) !important;
+    }
+
+        
+    /*------------------------------------------------------------------Layout*/
+    
+    
+    /* Header
+    --------------------------------*/
+    #titlearea > table > tbody > tr {
+        height: unset !important;
+    }
+    #projectname {
+        font: 1em var(--text-font-family);
+        margin:unset;
+        padding: 2px 0px;
+        transition-duration: 2s;
+        transition-property: font-size;
+    }
+    #projectname:hover {
+        font-size: 2em;
+    }
+
+    /* Left navigation pane
+    --------------------------------*/
+    #nav-tree {
+        scrollbar-color: var(--scrollbar-bg) var(--scrollbar-color)
+    }
+
+    /* #nav-tree::-webkit-scrollbar {
+        width: 12px;
+    }
+    #nav-tree::-webkit-scrollbar-corner {
+        background-color: grey;
+    }
+
+    #nav-tree::-webkit-scrollbar-track {
+        background-color: hsl(0, 0%, 30%) !important;
+        background: none;
+    }
+
+    #nav-tree::-webkit-scrollbar-thumb {
+        background-color: lightgray;
+    } */
+
+    #nav-tree .label {
+        margin: 0px;
+        padding: 0px;
+        font-size: inherit;
+        font-family: var(--text-font-family);
+    }
+
+    #nav-tree .item.selected {
+        text-shadow: unset;
+        background-color:  hsl(128deg 51% 32%) !important;
+        border-right: 2px solid rgb(149, 207, 120) !important;
+    }
+
+    #nav-tree .item {
+        padding: 0;
+        margin: 0;
+        text-shadow: unset;
+        border-right: 2px solid rgb(41, 41, 41);
+    }
+
+    #nav-tree .item.selected .label a {
+        color: white !important;
+    }
+
+    #side-nav > #nav-tree {
+        background-color: var(--background-color) !important;
+        background-repeat: unset;
+    }
+
+    /* Links */
+    #nav-tree-contents ul li div > span.label > a
+    {
+        font-weight: bold;
+        color: var(--nav-pane-link-color);
+        transition-duration: 720ms;
+        transition-timing-function: ease-out;
+    }
+
+    #nav-tree-contents ul li div > span.label:hover > a
+    {
+        color: white;
+        text-decoration: underline;
+    }
+
+
+    /* Delimiter */
+    .ui-resizable-e {
+        background-image: linear-gradient(orange, var(--link-color));
+    }
+    
+    /*  Content page 
+    --------------------------------*/
+    #doc-content {
+        overflow: auto;
+        background-color: var(--background-color) !important;
+    }
+
+    #doc-content iframe[src*=".svg"] {
+        filter: invert(0.88) hue-rotate(180deg);
+    }
+    #doc-content > div.header > div.summary {
+        top: 30px;
+        right: 16px;
+        position: absolute;
+    }
+
+
+    table.directory {
+        font-family: var(--text-font-family);
+        font-size: var(--text-font-size);
+    }
+
+    .contents .directory .levels span {
+        color: white;
+    }
+
+    div.fragment {
+        padding: 1em 12px;
+        font-family: var(--code-font-family);
+    }
+
+    .memtitle {
+        float: unset !important;
+        border: unset;
+    }
+
+    .memitem {
+        box-shadow: 5px 5px 5px rgb(0 0 0 / 15%);
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .memproto, dl.reflist dt {
+        color: #4e90dc !important;
+        text-shadow: 0px 1px 1px rgb(0 0 0 / 90%);
+        border: unset;
+        box-shadow: unset;
+        border-radius: unset;
+    }
+
+    .memproto, dl.reflist dd {
+        border: unset;
+    }
+
+    .memdoc, dl.reflist dd {
+        border: unset;
+        box-shadow: unset;
+        -moz-box-shadow:unset;
+        -webkit-box-shadow:unset;
+    }
+
+    .memSeparator {
+        border-bottom: 1px solid hsl(223deg 10% 27%);;
+    }
+    .memproto, dl.reflist dt {
+        color: #253555;
+        text-shadow: 0px 1px 1px rgb(0 0 0 / 90%);
+        border: unset;
+        box-shadow: unset;
+        border-radius: unset;
+    }
+    .memproto, dl.reflist dd {
+        border: unset;
+        box-shadow: unset;
+        border-radius: unset;
+        border-bottom: 1px solid hsl(223deg 10% 27%);
+    }
+
+    /* Syntax */
+    .paramname {
+        filter: invert(1) hue-rotate(180deg);
+    }
+    .alphachar a {
+        color: white;
+    }
+    
+    #doc-content .header
+    , #doc-content > div.header
+     {
+        border: none;
+        background-image: none;
+    }
+    .directory .levels span {
+        cursor: pointer;
+        padding-left: 2px;
+        padding-right: 2px;
+        color: #3D578C;
+    }
+
+    .memTemplParams {
+        color: var(--contents-template-color); 
+    }
+    
+    /* Footer
+    --------------------------------*/
+    .navpath li.navelem a {
+        color:hsl(0, 0%, 70%)
+    }
+    
+    #nav-path {
+        background-color: var(--background-color) !important;
+    }
+
+    #nav-path.navpath ul {
+        border: none;
+        background-image: none;
+    }
+    #nav-path > ul::before {
+        content: "Dark gcc.gnu.org Copyright (c) 2022- Hinell@github.com <al.neodim@gmail.com>"
+    }
+
+}
