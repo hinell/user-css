@@ -4,10 +4,10 @@
 @namespace    https://github.com/hinell/userstyles/styles/twitter
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.2
+@version      1.1.2
 @license      MIT
 ==/UserStyle== */
-@-moz-document domain("twitter.com") {
+@-moz-document regexp("https://(twitter|x)\.com.*") { 
     * {
         border: none !important;
     }
