@@ -4,13 +4,14 @@
 @namespace    https://github.com/hinell/userstyles/gnu-docs-man
 @homepageURL  https://github.com/hinell
 @author       Hinell <neodim@gmail.com> (https://github.com/hinell)
-@version      1.0.4
+@version      1.0.5
 @license      MIT
 ==/UserStyle== */
 
 @-moz-document
         regexp("^https:\/\/zsh.sourceforge.io\/.*"),
-        regexp("^file:.*\/[Dd]evdocs\/zsh/.*")
+        regexp("^file:.*\/[Dd]evdocs\/zsh/.*"),
+        regexp("^file:.*\/share\/doc\/zsh-common\/html\/.*"),
 {
     :root {
         --background-color  : hsl(0, 0%, 12%);

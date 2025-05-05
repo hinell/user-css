@@ -3,4 +3,4 @@
 
 TODO: Replace all *css files by .scss/.sass
 TODO: Create an (awk?) script to automatically generate ==userSript== header with versions taken from package.json
-TODO: Remove package.json files
+TODO: Remove ALL package.json files
